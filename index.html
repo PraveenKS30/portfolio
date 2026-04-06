@@ -1,218 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praveen Kumar Singh - Senior Engineering Manager & AI/ML Leader</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #5c4a35; background: #FFF8F0; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    header { background: #4a3728; color: #fff; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
-    .header-content { display: flex; flex-direction: row; align-items: center; gap: 20px; justify-content: flex-start; }
-    .profile-pic-header { border-radius: 50%; width: 70px; height: 70px; background: linear-gradient(135deg, #8b6f47 0%, #5c4a35 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); flex-shrink: 0; }
-    header h1 { font-size: 26px; margin: 0; }
-    nav { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-left: auto; }
-    nav a { color: #fff; text-decoration: none; transition: color 0.3s; font-size: 16px; }
-    nav a:hover { color: #c9a876; }
-    .hero { background: linear-gradient(135deg, #8b6f47 0%, #5c4a35 100%); color: #fff; padding: 100px 20px; text-align: center; }
-    .hero h2 { font-size: 3.5rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.3rem; margin-bottom: 2rem; }
-    .cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn { padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid; display: inline-block; }
-    .btn-primary { background: #c9a876; color: #fff; border-color: #c9a876; }
-    .btn-primary:hover { background: #b8956a; border-color: #b8956a; }
-    .btn-secondary { background: transparent; color: #fff; border-color: #fff; }
-    .btn-secondary:hover { background: #fff; color: #5c4a35; }
-    section { padding: 60px 20px; }
-    .section-title { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; color: #4a3728; }
-    .skills-grid, .projects-grid, .awards-grid, .publications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .skill-card, .project-card, .award-card, .publication-card { background: #faf6f1; padding: 2rem; border-radius: 8px; border-left: 4px solid #c9a876; box-shadow: 0 2px 10px rgba(74, 55, 40, 0.1); }
-    .skill-card h3, .project-card h3, .award-card h3, .publication-card h3 { color: #8b6f47; margin-bottom: 1rem; }
-    .project-card { transition: transform 0.3s; }
-    .project-card:hover { transform: translateY(-5px); }
-    .project-card a, .publication-card a { color: #8b6f47; text-decoration: none; font-weight: 600; }
-    .contact-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
-    .contact-links a { padding: 12px 20px; background: #c9a876; color: #fff; text-decoration: none; border-radius: 5px; display: inline-block; transition: background 0.3s; }
-    .contact-links a:hover { background: #b8956a; }
-    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .stat { text-align: center; padding: 2rem; background: #faf6f1; border-radius: 8px; }
-    .stat-number { font-size: 2.5rem; font-weight: bold; color: #8b6f47; }
-    .stat-label { color: #8b7355; margin-top: 0.5rem; }
-    .footer { background: #4a3728; color: #fff; text-align: center; padding: 2rem; margin-top: 3rem; }
-    @media(max-width: 768px) { .hero h2 { font-size: 2rem; } nav { flex-direction: column; gap: 0.5rem; margin-left: 0; margin-top: 10px; } .skills-grid, .projects-grid, .awards-grid, .publications-grid { grid-template-columns: 1fr; } header h1 { font-size: 22px; } .header-content { flex-wrap: wrap; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praveen Kumar Singh — Senior Engineering Manager | AI/ML Leader</title>
+<meta name="description" content="Senior Engineering Manager at Optum (UnitedHealth Group). 13+ years building AI-powered healthcare systems, leading distributed teams, and creating technical content.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf6f1;
+  --bg-alt: #f2ece4;
+  --surface: #fff;
+  --ink: #1a1814;
+  --ink-light: #5c574e;
+  --ink-lighter: #8a847a;
+  --accent: #c45d3e;
+  --accent-dark: #a34830;
+  --accent-soft: rgba(196,93,62,0.08);
+  --teal: #2a7a6d;
+  --teal-soft: rgba(42,122,109,0.08);
+  --border: #e2dcd4;
+  --border-strong: #cfc8be;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Source Sans 3', -apple-system, sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --max-w: 1080px;
+  --gutter: 24px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
+body { font-family:var(--sans); background:var(--bg); color:var(--ink); line-height:1.65; font-size:16px; }
+body::after {
+  content:''; position:fixed; inset:0;
+  background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.018'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:0;
+}
+.wrap { max-width:var(--max-w); margin:0 auto; padding:0 var(--gutter); position:relative; z-index:1; }
+a { color:var(--accent); text-decoration:none; transition:color 0.2s; }
+a:hover { color:var(--accent-dark); }
+
+/* NAV */
+nav { position:sticky; top:0; z-index:100; background:rgba(250,246,241,0.92); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); }
+nav .wrap { display:flex; align-items:center; justify-content:space-between; height:56px; }
+.nav-name { font-family:var(--serif); font-size:1.05rem; font-weight:700; color:var(--ink); }
+.nav-links { display:flex; gap:20px; align-items:center; }
+.nav-links a { font-size:0.82rem; font-weight:600; color:var(--ink-light); letter-spacing:0.03em; text-transform:uppercase; }
+.nav-links a:hover { color:var(--accent); }
+.btn-pdf { display:inline-flex; align-items:center; gap:6px; padding:7px 16px; font-family:var(--sans); font-size:0.78rem; font-weight:700; color:#fff; background:var(--accent); border:none; border-radius:6px; cursor:pointer; letter-spacing:0.04em; text-transform:uppercase; transition:all 0.2s; }
+.btn-pdf:hover { background:var(--accent-dark); transform:translateY(-1px); box-shadow:0 4px 12px rgba(196,93,62,0.25); }
+.btn-pdf svg { width:13px; height:13px; }
+
+/* HERO */
+.hero { padding:72px 0 56px; border-bottom:1px solid var(--border); }
+.hero-grid { display:grid; grid-template-columns:1fr 320px; gap:48px; align-items:end; }
+.hero-eyebrow { font-family:var(--mono); font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+.hero-eyebrow .pulse { width:7px; height:7px; border-radius:50%; background:var(--teal); animation:pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+.hero h1 { font-family:var(--serif); font-size:clamp(2.4rem,5vw,3.6rem); line-height:1.08; letter-spacing:-0.025em; font-weight:700; margin-bottom:18px; }
+.hero h1 em { font-style:italic; color:var(--accent); }
+.hero-bio { font-size:1.08rem; color:var(--ink-light); line-height:1.75; max-width:560px; margin-bottom:24px; }
+.hero-meta { display:flex; flex-wrap:wrap; gap:16px 28px; font-size:0.85rem; color:var(--ink-lighter); }
+.hero-meta span { display:inline-flex; align-items:center; gap:6px; }
+.hero-meta svg { width:14px; height:14px; color:var(--accent); flex-shrink:0; }
+.hero-stats { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.stat-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; text-align:center; transition:all 0.25s; }
+.stat-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+.stat-num { font-family:var(--serif); font-size:1.8rem; font-weight:700; color:var(--accent); line-height:1; }
+.stat-label { font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-lighter); margin-top:6px; }
+
+/* SECTIONS */
+section { padding:56px 0; }
+section + section { border-top:1px solid var(--border); }
+.sec-eyebrow { font-family:var(--mono); font-size:0.68rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.sec-title { font-family:var(--serif); font-size:clamp(1.6rem,3.5vw,2.2rem); letter-spacing:-0.015em; margin-bottom:32px; font-weight:700; }
+
+/* TIMELINE */
+.timeline { position:relative; padding-left:28px; }
+.timeline::before { content:''; position:absolute; left:6px; top:8px; bottom:8px; width:2px; background:var(--border-strong); }
+.tl-item { position:relative; padding-bottom:36px; }
+.tl-item:last-child { padding-bottom:0; }
+.tl-dot { position:absolute; left:-28px; top:6px; width:14px; height:14px; border-radius:50%; background:var(--bg); border:3px solid var(--accent); }
+.tl-item:first-child .tl-dot { background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft); }
+.tl-head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px 16px; margin-bottom:4px; }
+.tl-role { font-family:var(--serif); font-size:1.18rem; font-weight:600; }
+.tl-dates { font-family:var(--mono); font-size:0.72rem; color:var(--teal); background:var(--teal-soft); padding:3px 10px; border-radius:4px; white-space:nowrap; align-self:flex-start; }
+.tl-company { font-size:0.92rem; color:var(--accent); font-weight:600; margin-bottom:10px; }
+.tl-body { font-size:0.9rem; color:var(--ink-light); line-height:1.75; }
+.tl-body ul { margin-top:8px; list-style:none; }
+.tl-body li { padding-left:16px; position:relative; margin-bottom:5px; }
+.tl-body li::before { content:'›'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+
+/* CARDS */
+.ai-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px; }
+.ai-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px; transition:all 0.25s; }
+.ai-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+.ai-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:8px; }
+.ai-card p { font-size:0.84rem; color:var(--ink-light); line-height:1.65; }
+.ai-icon { width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; font-size:1.1rem; }
+
+.skills-cols { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
+.skill-group { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; }
+.skill-group-title { font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.skill-tags { display:flex; flex-wrap:wrap; gap:6px; }
+.stag { padding:4px 10px; font-size:0.78rem; background:var(--bg-alt); border:1px solid var(--border); border-radius:16px; color:var(--ink-light); transition:all 0.2s; }
+.stag:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--ink); }
+
+.proj-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
+.proj-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px; transition:all 0.25s; display:flex; flex-direction:column; }
+.proj-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.proj-card h4 { font-size:0.98rem; font-weight:700; margin-bottom:4px; }
+.proj-card .proj-desc { font-size:0.84rem; color:var(--ink-light); line-height:1.6; flex:1; margin-bottom:10px; }
+.proj-card .proj-meta { display:flex; gap:12px; font-family:var(--mono); font-size:0.72rem; color:var(--ink-lighter); margin-bottom:8px; }
+.proj-card .proj-link { font-size:0.82rem; font-weight:600; }
+
+.pub-list { display:flex; flex-direction:column; gap:12px; }
+.pub-row { display:flex; align-items:flex-start; gap:16px; padding:18px 22px; background:var(--surface); border:1px solid var(--border); border-radius:10px; transition:all 0.25s; }
+.pub-row:hover { border-color:var(--accent); }
+.pub-row .pub-emoji { font-size:1.3rem; flex-shrink:0; margin-top:2px; }
+.pub-row h4 { font-size:0.95rem; font-weight:700; margin-bottom:3px; }
+.pub-row p { font-size:0.84rem; color:var(--ink-light); line-height:1.6; }
+
+.awards-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
+.award-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px; transition:all 0.25s; }
+.award-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.award-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:2px; }
+.award-card .award-issuer { font-size:0.82rem; color:var(--accent); font-weight:600; margin-bottom:8px; }
+.award-card p { font-size:0.84rem; color:var(--ink-light); line-height:1.6; }
+
+.ed-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.ed-card { padding:22px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
+.ed-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:2px; }
+.ed-card .ed-sub { font-size:0.85rem; color:var(--accent); font-weight:600; margin-bottom:6px; }
+.ed-card p { font-size:0.84rem; color:var(--ink-light); }
+
+.vol-card { padding:22px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
+.vol-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:2px; }
+.vol-card .vol-org { font-size:0.85rem; color:var(--accent); font-weight:600; margin-bottom:6px; }
+.vol-card p { font-size:0.84rem; color:var(--ink-light); line-height:1.6; }
+
+/* PLACEHOLDER */
+.placeholder { display:inline-block; padding:2px 8px; background:#fff3cd; border:1px dashed #e0c36a; border-radius:4px; font-family:var(--mono); font-size:0.78rem; color:#856404; }
+
+/* WORKFLOW */
+.workflow { margin-top:48px; padding:32px; background:var(--surface); border:1px solid var(--border); border-radius:12px; }
+.workflow h3 { font-family:var(--serif); font-size:1.3rem; margin-bottom:12px; }
+.workflow > p { font-size:0.88rem; color:var(--ink-light); line-height:1.7; }
+.wf-steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-top:18px; }
+.wf-step { padding:16px; background:var(--bg-alt); border-radius:8px; text-align:center; }
+.wf-step .wf-num { font-family:var(--mono); font-size:0.68rem; color:var(--teal); letter-spacing:0.1em; margin-bottom:4px; }
+.wf-step p { font-size:0.82rem; color:var(--ink-light); }
+.wf-step code { font-family:var(--mono); font-size:0.78rem; color:var(--accent); background:var(--accent-soft); padding:1px 6px; border-radius:3px; }
+
+footer { padding:36px 0; border-top:1px solid var(--border); text-align:center; }
+footer p { font-size:0.78rem; color:var(--ink-lighter); }
+
+/* FADE */
+.fade-in { opacity:0; transform:translateY(16px); transition:opacity 0.5s ease, transform 0.5s ease; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* PRINT */
+@media print {
+  body { background:#fff; font-size:10.5pt; }
+  body::after, nav, .btn-pdf, .workflow, footer, .placeholder { display:none !important; }
+  .wrap { max-width:100%; padding:0 14px; }
+  .hero { padding:12px 0 10px; }
+  .hero-grid { grid-template-columns:1fr auto; gap:20px; }
+  .hero h1 { font-size:20pt; }
+  .hero h1 em { color:var(--accent); }
+  .hero-bio { font-size:10pt; margin-bottom:10px; }
+  section { padding:10px 0; }
+  .sec-title { font-size:13pt; margin-bottom:10px; }
+  .tl-item { padding-bottom:12px; }
+  .timeline { padding-left:18px; }
+  .tl-role { font-size:11pt; }
+  .tl-body { font-size:9pt; }
+  .ai-grid, .skills-cols, .proj-grid, .awards-grid, .ed-grid { gap:6px; }
+  .ai-card, .skill-group, .proj-card, .award-card, .pub-row, .ed-card, .vol-card, .stat-card { background:#fafafa; border-color:#ddd; box-shadow:none; page-break-inside:avoid; padding:12px; }
+  .stat-num { font-size:14pt; }
+  .stat-card { padding:10px; }
+  .hero-stats { gap:6px; }
+  * { animation:none !important; transition:none !important; }
+  .fade-in { opacity:1 !important; transform:none !important; }
+}
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  .hero-grid { grid-template-columns:1fr; gap:28px; }
+  .hero-stats { grid-template-columns:repeat(4,1fr); }
+  .stat-card { padding:14px 8px; }
+  .stat-num { font-size:1.3rem; }
+  .nav-links a.desk { display:none; }
+  .ed-grid { grid-template-columns:1fr; }
+}
+@media (max-width:480px) {
+  .hero-stats { grid-template-columns:repeat(2,1fr); }
+}
+</style>
 </head>
-<body>  <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="profile-pic-header">👨‍💼</div>
-        <h1>Praveen Kumar Singh</h1>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#expertise">Expertise</a>
-          <a href="#projects">Projects</a>
-          <a href="#awards">Awards</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+<body>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Senior Engineering Manager & AI/ML Leader</h2>
-      <p>Building scalable AI systems | Leading distributed teams | Innovating healthcare technology</p>
-      <div class="cta">
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="https://github.com/PraveenKS30" class="btn btn-secondary">View GitHub</a>
-      </div>
+<nav>
+  <div class="wrap">
+    <div class="nav-name">Praveen Kumar Singh</div>
+    <div class="nav-links">
+      <a href="#experience" class="desk">Experience</a>
+      <a href="#projects" class="desk">Projects</a>
+      <a href="#publications" class="desk">Content</a>
+      <button class="btn-pdf" onclick="window.print()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        PDF
+      </button>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p>I'm a Senior Engineering Manager at Optum (UnitedHealth Group) with 13+ years of experience building innovative AI/ML solutions and leading high-performing engineering teams.</p>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-number">13+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">30+</div>
-          <div class="stat-label">Engineers Led</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">8k+</div>
-          <div class="stat-label">YouTube Followers</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">7</div>
-          <div class="stat-label">Published Courses</div>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow"><span class="pulse"></span> Open to opportunities</div>
+        <h1>Senior Engineering<br>Manager &amp; <em>AI/ML Leader</em></h1>
+        <p class="hero-bio">
+          I build AI-powered healthcare systems at <strong>Optum (UnitedHealth Group)</strong>, leading cross-functional teams of 30+ engineers across the clinical domain. With 13+ years of hands-on engineering and leadership, I specialize in bringing Generative AI from prototype to production in regulated environments — while sharing what I learn through courses, videos, and open-source code.
+        </p>
+        <div class="hero-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Hyderabad, India</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>Optum / UnitedHealth Group</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:praveenks30@gmail.com">praveenks30@gmail.com</a></span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><a href="https://linkedin.com/in/praveenks30" target="_blank">linkedin.com/in/praveenks30</a></span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg><a href="https://github.com/PraveenKS30" target="_blank">github.com/PraveenKS30</a></span>
         </div>
       </div>
+      <div class="hero-stats">
+        <div class="stat-card"><div class="stat-num">13+</div><div class="stat-label">Years Exp.</div></div>
+        <div class="stat-card"><div class="stat-num">30+</div><div class="stat-label">Engineers Led</div></div>
+        <div class="stat-card"><div class="stat-num">8K+</div><div class="stat-label">YouTube Subs</div></div>
+        <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">Published Courses</div></div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="expertise">
-    <div class="container">
-      <h2 class="section-title">Core Expertise</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>🤖 AI/ML & Generative AI</h3>
-          <p>OpenAI API, Claude, Gemini, LlamaIndex, LangChain, prompt engineering, multi-agent systems</p>
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-eyebrow">Career Journey</div>
+    <h2 class="sec-title">Professional Experience</h2>
+    <div class="timeline">
+
+      <div class="tl-item fade-in">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <div class="tl-role">Senior Engineering Manager</div>
+          <div class="tl-dates">Sep 2016 — Present</div>
         </div>
-        <div class="skill-card">
-          <h3>☁️ Cloud & Infrastructure</h3>
-          <p>GCP (Vertex AI, Cloud Run, Pub/Sub), Azure, Docker, Kubernetes, CI/CD pipelines</p>
+        <div class="tl-company">Optum (UnitedHealth Group) · Hyderabad, India</div>
+        <div class="tl-body">
+          Leading development and maintenance of healthcare projects across multiple U.S. states, focused on the clinical domain. Managing onshore &amp; offshore teams of 30+ engineers.
+          <ul>
+            <li>Spearheading AI initiatives — launched <strong>Crimson AI</strong> to optimize operating room scheduling</li>
+            <li>Built <strong>AI-powered semantic mapper</strong> to align assessment questionnaires across vendors</li>
+            <li>Developed AI solution to extract <strong>SDOH insights</strong> from raw clinical notes for personalized care</li>
+            <li>Designed <strong>agentic workflow</strong> transforming raw data into valid HL7 FHIR formats</li>
+            <li>Won <strong>Make IT Happen 2023</strong> — Optum's top annual recognition for AI/ML innovation</li>
+            <li>Led winning teams at <strong>Clinical Z Hackathon</strong> in 2023 and 2024</li>
+          </ul>
         </div>
-        <div class="skill-card">
-          <h3>🔧 Backend & Data</h3>
-          <p>Python, Java, FastAPI, Spring Boot, Apache Kafka, PostgreSQL, MongoDB</p>
+      </div>
+
+      <div class="tl-item fade-in">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <div class="tl-role">Co-Founder &amp; Tech Lead</div>
+          <div class="tl-dates">~8 Years (Parallel)</div>
         </div>
-        <div class="skill-card">
-          <h3>🏥 Healthcare Tech</h3>
-          <p>HL7 FHIR, SNOMED CT, LOINC, clinical workflows, EHR systems, HIPAA compliance</p>
+        <div class="tl-company">MyFab11 — Fantasy Sports Platform · India</div>
+        <div class="tl-body">
+          Built a fantasy sports platform from the ground up, covering Cricket, Football, Basketball, and Kabaddi.
+          <ul>
+            <li>Grew from 0 → 10K downloads in 3 years, then scaled to <strong>100K+ downloads</strong> in 10 months</li>
+            <li>Owned full product lifecycle — architecture, dev, payment integrations, real-time scoring, retention</li>
+            <li>Managed brand partnerships and user growth strategies</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item fade-in">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <div class="tl-role"><span class="placeholder">✏️ Previous Role Title</span></div>
+          <div class="tl-dates"><span class="placeholder">✏️ Dates</span></div>
+        </div>
+        <div class="tl-company"><span class="placeholder">✏️ Company Name · Location</span></div>
+        <div class="tl-body">
+          <span class="placeholder">✏️ Add your earlier career history. Recruiters need to see your full progression — every title, company, and key achievements before Optum.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="ai-work">
+  <div class="wrap">
+    <div class="sec-eyebrow">Innovation</div>
+    <h2 class="sec-title">Generative AI Initiatives</h2>
+    <div class="ai-grid">
+      <div class="ai-card fade-in">
+        <div class="ai-icon" style="background:var(--accent-soft);">🧠</div>
+        <h4>AI Semantic Mapper</h4>
+        <p>Aligns assessment questionnaires across vendors for seamless data standardization in healthcare systems.</p>
+      </div>
+      <div class="ai-card fade-in">
+        <div class="ai-icon" style="background:var(--teal-soft);">🏥</div>
+        <h4>SDOH Insights Extraction</h4>
+        <p>Extracts Social Determinants of Health from raw clinical notes to enable personalized care interventions.</p>
+      </div>
+      <div class="ai-card fade-in">
+        <div class="ai-icon" style="background:var(--accent-soft);">🔄</div>
+        <h4>Agentic HL7 FHIR Workflow</h4>
+        <p>Transforms raw data into valid HL7 FHIR formats via agentic workflow, ensuring interoperability &amp; compliance.</p>
+      </div>
+      <div class="ai-card fade-in">
+        <div class="ai-icon" style="background:var(--teal-soft);">🤖</div>
+        <h4>Multi-Agent Systems</h4>
+        <p>R&amp;D on multi-agent workflows using Google ADK, OpenAI Agents SDK, LangChain, and LlamaIndex.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-eyebrow">Technical Expertise</div>
+    <h2 class="sec-title">Skills &amp; Technologies</h2>
+    <div class="skills-cols">
+      <div class="skill-group fade-in">
+        <div class="skill-group-title">AI / ML</div>
+        <div class="skill-tags">
+          <span class="stag">Generative AI</span><span class="stag">OpenAI API</span><span class="stag">Claude</span><span class="stag">Gemini</span><span class="stag">LlamaIndex</span><span class="stag">LangChain</span><span class="stag">RAG</span><span class="stag">Prompt Engineering</span><span class="stag">Multi-Agent Systems</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
+        <div class="skill-group-title">Cloud & Infra</div>
+        <div class="skill-tags">
+          <span class="stag">GCP</span><span class="stag">Vertex AI</span><span class="stag">Cloud Run</span><span class="stag">Pub/Sub</span><span class="stag">Azure</span><span class="stag">Docker</span><span class="stag">Kubernetes</span><span class="stag">CI/CD</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
+        <div class="skill-group-title">Backend & Data</div>
+        <div class="skill-tags">
+          <span class="stag">Python</span><span class="stag">Java</span><span class="stag">FastAPI</span><span class="stag">Spring Boot</span><span class="stag">Spring AI</span><span class="stag">Kafka</span><span class="stag">PostgreSQL</span><span class="stag">MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
+        <div class="skill-group-title">Healthcare</div>
+        <div class="skill-tags">
+          <span class="stag">HL7 FHIR</span><span class="stag">SNOMED CT</span><span class="stag">LOINC</span><span class="stag">Clinical Workflows</span><span class="stag">EHR Systems</span><span class="stag">HIPAA</span><span class="stag">AHM 250</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
+        <div class="skill-group-title">Leadership</div>
+        <div class="skill-tags">
+          <span class="stag">Team Management (30+)</span><span class="stag">Agile / Scrum</span><span class="stag">Onshore-Offshore</span><span class="stag">Stakeholder Mgmt</span><span class="stag">Mentoring</span><span class="stag">Strategic Solutioning</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>GenerativeAI</h3>
-          <p>Comprehensive guide to building generative AI applications | 15 ⭐ | 14 forks</p>
-          <a href="https://github.com/PraveenKS30/GenerativeAI" target="_blank">View on GitHub →</a>
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-eyebrow">Open Source</div>
+    <h2 class="sec-title">Featured GitHub Projects</h2>
+    <div class="proj-grid">
+      <div class="proj-card fade-in">
+        <h4>Access-Azure-Using-Python</h4>
+        <p class="proj-desc">Code snippets for Azure Services (Key Vault, Blob Storage, Functions) using Python.</p>
+        <div class="proj-meta"><span>⭐ 14</span><span>🍴 14</span><span>Python</span></div>
+        <a class="proj-link" href="https://github.com/PraveenKS30/Access-Azure-Using-Python" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card fade-in">
+        <h4>GenerativeAI</h4>
+        <p class="proj-desc">Guide to building generative AI apps with OpenAI, Spring Boot, and Streamlit.</p>
+        <div class="proj-meta"><span>⭐ 14</span><span>🍴 12</span><span>Python + Java</span></div>
+        <a class="proj-link" href="https://github.com/PraveenKS30/GenerativeAI" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card fade-in">
+        <h4>OpenAI Agents SDK</h4>
+        <p class="proj-desc">Learning resource for OpenAI Agent SDK — tools, multi-turn conversations, patterns.</p>
+        <div class="proj-meta"><span>⭐ 8</span><span>🍴 3</span><span>Python</span></div>
+        <a class="proj-link" href="https://github.com/PraveenKS30/openai_agents_sdk" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card fade-in">
+        <h4>Spring AI</h4>
+        <p class="proj-desc">Getting started with Spring AI — integrating LLMs into Java/Spring Boot apps.</p>
+        <div class="proj-meta"><span>⭐ 4</span><span>🍴 6</span><span>Java</span></div>
+        <a class="proj-link" href="https://github.com/PraveenKS30/Spring-AI" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card fade-in">
+        <h4>Google ADK</h4>
+        <p class="proj-desc">Beginner guide for Google's AI Development Kit with walkthroughs.</p>
+        <div class="proj-meta"><span>⭐ 3</span><span>🍴 1</span><span>Python</span></div>
+        <a class="proj-link" href="https://github.com/PraveenKS30/google-adk" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-eyebrow">Knowledge Sharing</div>
+    <h2 class="sec-title">Publications &amp; Content</h2>
+    <div class="pub-list">
+      <div class="pub-row fade-in">
+        <div class="pub-emoji">📺</div>
+        <div>
+          <h4>YouTube — AI &amp; Cloud (8K+ subscribers)</h4>
+          <p>Weekly videos on Generative AI, LLMs, Azure, and engineering best practices. <a href="https://www.youtube.com/thingstoknow30" target="_blank">Watch →</a></p>
         </div>
-        <div class="project-card">
-          <h3>OpenAI Agents SDK</h3>
-          <p>Learning resource for OpenAI Agent SDK framework | 10 ⭐ | 3 forks</p>
-          <a href="https://github.com/PraveenKS30/openai_agents_sdk" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="pub-row fade-in">
+        <div class="pub-emoji">🎓</div>
+        <div>
+          <h4>Udemy Courses (7 Published)</h4>
+          <p>OpenAI Agents SDK, LlamaIndex, Apache Kafka, Talend ETL, and more. <a href="https://www.udemy.com/user/54e02ba4ccf1e/" target="_blank">View Courses →</a></p>
         </div>
-        <div class="project-card">
-          <h3>Google ADK Getting Started</h3>
-          <p>Guide for Google's AI Development Kit | 11 ⭐ | 1 fork</p>
-          <a href="https://github.com/PraveenKS30/getting-started-google-adk" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="pub-row fade-in">
+        <div class="pub-emoji">📖</div>
+        <div>
+          <h4>Medium Articles</h4>
+          <p>AI/ML, system design, Kafka patterns, and engineering practices. <a href="https://medium.com/@praveenkumarsingh" target="_blank">Read →</a></p>
+        </div>
+      </div>
+      <div class="pub-row fade-in">
+        <div class="pub-emoji">📱</div>
+        <div>
+          <h4>Healthcare Domain App (AHM 250)</h4>
+          <p>Free Android app for healthcare domain knowledge based on the AHM 250 certification guide.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="awards">
-    <div class="container">
-      <h2 class="section-title">Awards & Recognitions</h2>
-      <div class="awards-grid">
-<div class="award-card">
-                <h3>🏆 Make IT Happen 2023</h3>
-                <p><strong>Issued by Optum</strong> · May 2024</p>
-                <p>Prestigious annual recognition awarded to exceptional teams across all organizations. Selected from numerous nominations, this award represents the highest level of organizational excellence. Recognized for outstanding contributions to AI/ML innovation and system design at Optum.</p>
-            </div>
-
-            <div class="award-card">
-                <h3>🥇 Clinical Z: C&S Hackathon 2024</h3>
-                <p><strong>Issued by Optum</strong> · Jan 2024</p>
-                <p>Led a winning hackathon team competing in Optum's Clinical Z and Claims & Settlements domain. Developed innovative healthcare technology solutions demonstrating excellence in rapid prototyping and problem-solving within healthcare innovation.</p>
-            </div>
-
-            <div class="award-card">
-                <h3>🥇 Clinical Z: C&S Hackathon 2023</h3>
-                <p><strong>Issued by Optum</strong> · Jan 2023</p>
-                <p>Spearheaded Clinical Z team to hackathon victory in Optum's annual internal competition. Demonstrated exceptional technical leadership, innovative thinking, and effective team collaboration in healthcare technology development.</p>
-            </div>
-
-            <div class="award-card">
-                <h3>🏅 Hackerrank: Python Gold Badge</h3>
-                <p><strong>Issued by Hackerrank</strong></p>
-                <p>Earned the prestigious Hackerrank Python Gold Badge, demonstrating mastery in Python programming. This certification validates proficiency in Python problem-solving, algorithm design, and coding best practices on a competitive platform.</p>
-            </div>      </div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="container">
-      <h2 class="section-title">Publications & Content</h2>
-      <div class="publications-grid">
-        <div class="publication-card">
-          <h3>📺 YouTube Channel</h3>
-          <p>TechyTacos - Generative AI tutorials, LLM applications, and AI/ML engineering best practices</p>
-          <a href="https://www.youtube.com/c/TechyTacos" target="_blank">View Channel →</a>
-        </div>
-        <div class="publication-card">
-          <h3>📖 Medium Articles</h3>
-          <p>In-depth articles on AI/ML, system design, and software engineering practices</p>
-          <a href="https://medium.com/@praveenkumarsingh" target="_blank">Read Articles →</a>
-        </div>
-        <div class="publication-card">
-          <h3>🎓 Udemy Courses</h3>
-          <p>Published courses on generative AI, LLMs, and prompt engineering with thousands of students</p>
-          <a href="https://www.udemy.com/instructor/praveenkumarsingh" target="_blank">View Courses →</a>
-        </div>
+<section id="awards">
+  <div class="wrap">
+    <div class="sec-eyebrow">Recognition</div>
+    <h2 class="sec-title">Awards &amp; Honors</h2>
+    <div class="awards-grid">
+      <div class="award-card fade-in">
+        <h4>🏆 Make IT Happen 2023</h4>
+        <div class="award-issuer">Optum · May 2024</div>
+        <p>Prestigious annual award for exceptional AI/ML innovation and system design.</p>
+      </div>
+      <div class="award-card fade-in">
+        <h4>🥇 Clinical Z Hackathon 2024</h4>
+        <div class="award-issuer">Optum · Jan 2024</div>
+        <p>Led winning team in rapid prototyping innovative healthcare solutions.</p>
+      </div>
+      <div class="award-card fade-in">
+        <h4>🥇 Clinical Z Hackathon 2023</h4>
+        <div class="award-issuer">Optum · Jan 2023</div>
+        <p>Spearheaded team to hackathon victory with exceptional technical leadership.</p>
+      </div>
+      <div class="award-card fade-in">
+        <h4>🏅 HackerRank Python Gold Badge</h4>
+        <div class="award-issuer">HackerRank</div>
+        <p>Mastery in Python — algorithms, problem-solving, and coding best practices.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Let's Connect</h2>
-      <p style="text-align: center; margin-bottom: 2rem; color: #5c4a35;">Open to discussions about AI/ML, healthcare technology, and career opportunities</p>
-      <div class="contact-links">
-        <a href="mailto:praveenks30@gmail.com">📧 Email: praveenks30@gmail.com</a>
-        <a href="https://linkedin.com/in/praveenks30" target="_blank">💼 LinkedIn: /in/praveenks30</a>
-        <a href="https://github.com/PraveenKS30" target="_blank">🐙 GitHub: @PraveenKS30</a>
-        <a href="https://x.com/PraveenKS30" target="_blank">𝕏 X/Twitter: @PraveenKS30</a>
-        <a href="https://medium.com/@praveenkumarsingh" target="_blank">📖 Medium: @praveenkumarsingh</a>
+<section id="education">
+  <div class="wrap">
+    <div class="sec-eyebrow">Credentials</div>
+    <h2 class="sec-title">Education &amp; Certifications</h2>
+    <div class="ed-grid">
+      <div class="ed-card fade-in">
+        <h4>🎓 <span class="placeholder">✏️ Your Degree (e.g., B.Tech CS)</span></h4>
+        <div class="ed-sub"><span class="placeholder">✏️ University Name</span></div>
+        <p><span class="placeholder">✏️ Graduation Year</span></p>
+      </div>
+      <div class="ed-card fade-in">
+        <h4>☁️ Azure Certification</h4>
+        <div class="ed-sub">Microsoft · Sep 2019</div>
+        <p><span class="placeholder">✏️ Specify cert (AZ-900, AZ-104, etc.)</span></p>
+      </div>
+      <div class="ed-card fade-in">
+        <h4>🏥 AHM 250 — Healthcare</h4>
+        <div class="ed-sub">Credential ID: PraveenKS30</div>
+        <p>Healthcare administration and managed care knowledge.</p>
+      </div>
+      <div class="ed-card fade-in">
+        <h4><span class="placeholder">✏️ Add more certs (AWS, GCP, Kafka, etc.)</span></h4>
+        <div class="ed-sub"><span class="placeholder">✏️ Issuer · Date</span></div>
+        <p><span class="placeholder">✏️ Details</span></p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Praveen Kumar Singh. All rights reserved.</p>
-    <p>Senior Engineering Manager | AI/ML Leader | Healthcare Tech Expert</p>
-  </footer>
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">Giving Back</div>
+    <h2 class="sec-title">Volunteering</h2>
+    <div class="vol-card fade-in">
+      <h4>Children's Health Support</h4>
+      <div class="vol-org">Charitable Cause</div>
+      <p>Donated to help a child with lung surgery. Actively involved in supporting children's health and well-being.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="yr"></span> Praveen Kumar Singh · <a href="https://linkedin.com/in/praveenks30" target="_blank">LinkedIn</a> · <a href="https://github.com/PraveenKS30" target="_blank">GitHub</a> · <a href="https://www.youtube.com/thingstoknow30" target="_blank">YouTube</a></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.08});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
