@@ -1,529 +1,909 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Praveen Kumar Singh — Senior Engineering Manager | AI/ML Leader</title>
-<meta name="description" content="Senior Engineering Manager at Optum (UnitedHealth Group). 13+ years building AI-powered healthcare systems, leading distributed teams, and creating technical content.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #faf6f1;
-  --bg-alt: #f2ece4;
-  --surface: #fff;
-  --ink: #1a1814;
-  --ink-light: #5c574e;
-  --ink-lighter: #8a847a;
-  --accent: #c45d3e;
-  --accent-dark: #a34830;
-  --accent-soft: rgba(196,93,62,0.08);
-  --teal: #2a7a6d;
-  --teal-soft: rgba(42,122,109,0.08);
-  --border: #e2dcd4;
-  --border-strong: #cfc8be;
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'Source Sans 3', -apple-system, sans-serif;
-  --mono: 'IBM Plex Mono', monospace;
-  --max-w: 1080px;
-  --gutter: 24px;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
-body { font-family:var(--sans); background:var(--bg); color:var(--ink); line-height:1.65; font-size:16px; }
-body::after {
-  content:''; position:fixed; inset:0;
-  background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.018'/%3E%3C/svg%3E");
-  pointer-events:none; z-index:0;
-}
-.wrap { max-width:var(--max-w); margin:0 auto; padding:0 var(--gutter); position:relative; z-index:1; }
-a { color:var(--accent); text-decoration:none; transition:color 0.2s; }
-a:hover { color:var(--accent-dark); }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praveen Kumar Singh — Senior Engineering Manager & AI Leader</title>
+  <style>
+    :root {
+      --primary: #0f4c81;
+      --accent: #00b4d8;
+      --accent2: #38b000;
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --surface2: #1a2236;
+      --border: #1e3a5f;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --white: #ffffff;
+      --tag-bg: #0f3460;
+      --card-shadow: 0 4px 24px rgba(0,180,216,0.08);
+      --glow: 0 0 20px rgba(0,180,216,0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-/* NAV */
-nav { position:sticky; top:0; z-index:100; background:rgba(250,246,241,0.92); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); }
-nav .wrap { display:flex; align-items:center; justify-content:space-between; height:56px; }
-.nav-name { font-family:var(--serif); font-size:1.05rem; font-weight:700; color:var(--ink); }
-.nav-links { display:flex; gap:20px; align-items:center; }
-.nav-links a { font-size:0.82rem; font-weight:600; color:var(--ink-light); letter-spacing:0.03em; text-transform:uppercase; }
-.nav-links a:hover { color:var(--accent); }
-.btn-pdf { display:inline-flex; align-items:center; gap:6px; padding:7px 16px; font-family:var(--sans); font-size:0.78rem; font-weight:700; color:#fff; background:var(--accent); border:none; border-radius:6px; cursor:pointer; letter-spacing:0.04em; text-transform:uppercase; transition:all 0.2s; }
-.btn-pdf:hover { background:var(--accent-dark); transform:translateY(-1px); box-shadow:0 4px 12px rgba(196,93,62,0.25); }
-.btn-pdf svg { width:13px; height:13px; }
+    /* ── NAVBAR ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(10,14,26,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    nav .logo { font-weight: 700; font-size: 1.1rem; color: var(--accent); letter-spacing: 0.5px; }
+    nav ul { list-style: none; display: flex; gap: 1.8rem; }
+    nav ul a { color: var(--muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    nav ul a:hover { color: var(--accent); }
 
-/* HERO */
-.hero { padding:72px 0 56px; border-bottom:1px solid var(--border); }
-.hero-grid { display:grid; grid-template-columns:1fr 320px; gap:48px; align-items:end; }
-.hero-eyebrow { font-family:var(--mono); font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; display:flex; align-items:center; gap:8px; }
-.hero-eyebrow .pulse { width:7px; height:7px; border-radius:50%; background:var(--teal); animation:pulse 2s ease-in-out infinite; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
-.hero h1 { font-family:var(--serif); font-size:clamp(2.4rem,5vw,3.6rem); line-height:1.08; letter-spacing:-0.025em; font-weight:700; margin-bottom:18px; }
-.hero h1 em { font-style:italic; color:var(--accent); }
-.hero-bio { font-size:1.08rem; color:var(--ink-light); line-height:1.75; max-width:560px; margin-bottom:24px; }
-.hero-meta { display:flex; flex-wrap:wrap; gap:16px 28px; font-size:0.85rem; color:var(--ink-lighter); }
-.hero-meta span { display:inline-flex; align-items:center; gap:6px; }
-.hero-meta svg { width:14px; height:14px; color:var(--accent); flex-shrink:0; }
-.hero-stats { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.stat-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; text-align:center; transition:all 0.25s; }
-.stat-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.06); }
-.stat-num { font-family:var(--serif); font-size:1.8rem; font-weight:700; color:var(--accent); line-height:1; }
-.stat-label { font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-lighter); margin-top:6px; }
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+      background: radial-gradient(ellipse at 50% 0%, rgba(0,180,216,0.12) 0%, transparent 65%),
+                  radial-gradient(ellipse at 80% 80%, rgba(15,76,129,0.2) 0%, transparent 60%),
+                  var(--bg);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300b4d8' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    .hero-inner { position: relative; max-width: 800px; }
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(0,180,216,0.15), rgba(15,76,129,0.2));
+      border: 1px solid rgba(0,180,216,0.3);
+      color: var(--accent);
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    /* ADD: Professional headshot here */
+    .hero-avatar {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; font-weight: 700; color: white;
+      box-shadow: var(--glow);
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff, #a0c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-title {
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .hero-location {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .hero-value {
+      font-size: 1.05rem;
+      color: var(--text);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0.85;
+    }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--accent); display: block; }
+    .stat-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .hero-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.7rem 1.6rem;
+      border-radius: 8px;
+      font-size: 0.9rem; font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #0077b6);
+      color: white;
+      box-shadow: 0 4px 15px rgba(0,180,216,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,180,216,0.45); }
+    .btn-outline {
+      border: 1.5px solid var(--border);
+      color: var(--text);
+      background: transparent;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
-/* SECTIONS */
-section { padding:56px 0; }
-section + section { border-top:1px solid var(--border); }
-.sec-eyebrow { font-family:var(--mono); font-size:0.68rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
-.sec-title { font-family:var(--serif); font-size:clamp(1.6rem,3.5vw,2.2rem); letter-spacing:-0.015em; margin-bottom:32px; font-weight:700; }
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--accent); font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      margin-bottom: 0.75rem;
+    }
+    .section-label::before { content: ''; width: 24px; height: 2px; background: var(--accent); border-radius: 2px; }
+    h2.section-title { font-size: 2rem; font-weight: 800; margin-bottom: 2.5rem; color: var(--white); }
 
-/* TIMELINE */
-.timeline { position:relative; padding-left:28px; }
-.timeline::before { content:''; position:absolute; left:6px; top:8px; bottom:8px; width:2px; background:var(--border-strong); }
-.tl-item { position:relative; padding-bottom:36px; }
-.tl-item:last-child { padding-bottom:0; }
-.tl-dot { position:absolute; left:-28px; top:6px; width:14px; height:14px; border-radius:50%; background:var(--bg); border:3px solid var(--accent); }
-.tl-item:first-child .tl-dot { background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft); }
-.tl-head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px 16px; margin-bottom:4px; }
-.tl-role { font-family:var(--serif); font-size:1.18rem; font-weight:600; }
-.tl-dates { font-family:var(--mono); font-size:0.72rem; color:var(--teal); background:var(--teal-soft); padding:3px 10px; border-radius:4px; white-space:nowrap; align-self:flex-start; }
-.tl-company { font-size:0.92rem; color:var(--accent); font-weight:600; margin-bottom:10px; }
-.tl-body { font-size:0.9rem; color:var(--ink-light); line-height:1.75; }
-.tl-body ul { margin-top:8px; list-style:none; }
-.tl-body li { padding-left:16px; position:relative; margin-bottom:5px; }
-.tl-body li::before { content:'›'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+    /* ── ABOUT ── */
+    #about { background: var(--surface); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; font-size: 0.97rem; }
+    .about-highlights { display: flex; flex-direction: column; gap: 1rem; }
+    .highlight-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      display: flex; align-items: flex-start; gap: 1rem;
+      transition: border-color 0.2s;
+    }
+    .highlight-card:hover { border-color: var(--accent); }
+    .highlight-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .highlight-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; }
+    .highlight-card p { font-size: 0.82rem; color: var(--muted); margin: 0; }
 
-/* CARDS */
-.ai-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px; }
-.ai-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px; transition:all 0.25s; }
-.ai-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,0.06); }
-.ai-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:8px; }
-.ai-card p { font-size:0.84rem; color:var(--ink-light); line-height:1.65; }
-.ai-icon { width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; font-size:1.1rem; }
+    /* ── EXPERIENCE ── */
+    #experience { background: var(--bg); }
+    .timeline { position: relative; }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 20px; top: 0; bottom: 0;
+      width: 2px; background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+    .timeline-item { position: relative; padding-left: 60px; margin-bottom: 3rem; }
+    .timeline-dot {
+      position: absolute; left: 12px; top: 4px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 3px rgba(0,180,216,0.3);
+    }
+    .timeline-dot.current { background: var(--accent2); box-shadow: 0 0 0 3px rgba(56,176,0,0.3), var(--glow); }
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .exp-card:hover { border-color: rgba(0,180,216,0.4); box-shadow: var(--card-shadow); }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
+    .exp-role { font-size: 1.05rem; font-weight: 700; color: var(--white); }
+    .exp-date { font-size: 0.8rem; color: var(--accent); font-weight: 600; background: rgba(0,180,216,0.1); padding: 0.2rem 0.7rem; border-radius: 20px; white-space: nowrap; }
+    .exp-company { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; font-weight: 500; }
+    .exp-company .company-badge {
+      display: inline-block; background: rgba(15,76,129,0.4); border: 1px solid var(--border);
+      padding: 0.1rem 0.5rem; border-radius: 4px; font-size: 0.75rem; color: var(--accent); margin-left: 0.5rem;
+    }
+    .exp-bullets { list-style: none; }
+    .exp-bullets li {
+      position: relative; padding-left: 1.25rem;
+      font-size: 0.88rem; color: var(--muted); margin-bottom: 0.5rem;
+      line-height: 1.55;
+    }
+    .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
+    .exp-bullets li strong { color: var(--text); font-weight: 600; }
 
-.skills-cols { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
-.skill-group { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; }
-.skill-group-title { font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
-.skill-tags { display:flex; flex-wrap:wrap; gap:6px; }
-.stag { padding:4px 10px; font-size:0.78rem; background:var(--bg-alt); border:1px solid var(--border); border-radius:16px; color:var(--ink-light); transition:all 0.2s; }
-.stag:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--ink); }
+    /* ── SKILLS ── */
+    #skills { background: var(--surface); }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .skill-group {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .skill-group:hover { border-color: rgba(0,180,216,0.4); }
+    .skill-group-title {
+      font-size: 0.8rem; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+    .skill-tag.hot { border-color: rgba(0,180,216,0.5); color: var(--accent); }
 
-.proj-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
-.proj-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px; transition:all 0.25s; display:flex; flex-direction:column; }
-.proj-card:hover { border-color:var(--accent); transform:translateY(-2px); }
-.proj-card h4 { font-size:0.98rem; font-weight:700; margin-bottom:4px; }
-.proj-card .proj-desc { font-size:0.84rem; color:var(--ink-light); line-height:1.6; flex:1; margin-bottom:10px; }
-.proj-card .proj-meta { display:flex; gap:12px; font-family:var(--mono); font-size:0.72rem; color:var(--ink-lighter); margin-bottom:8px; }
-.proj-card .proj-link { font-size:0.82rem; font-weight:600; }
+    /* ── PROJECTS ── */
+    #projects { background: var(--bg); }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      display: flex; flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover { border-color: rgba(0,180,216,0.5); transform: translateY(-3px); box-shadow: var(--card-shadow); }
+    .project-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+    .project-name { font-size: 1rem; font-weight: 700; color: var(--white); }
+    .project-stars { font-size: 0.78rem; color: #f6c90e; font-weight: 600; }
+    .project-desc { font-size: 0.85rem; color: var(--muted); flex: 1; margin-bottom: 1rem; line-height: 1.5; }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.2rem; }
+    .tech-badge {
+      background: rgba(15,76,129,0.4);
+      border: 1px solid rgba(0,180,216,0.2);
+      color: var(--accent);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.72rem; font-weight: 600;
+    }
+    .project-links { display: flex; gap: 0.75rem; margin-top: auto; }
+    .project-link {
+      font-size: 0.8rem; font-weight: 600; color: var(--accent);
+      text-decoration: none; display: flex; align-items: center; gap: 0.3rem;
+      transition: opacity 0.2s;
+    }
+    .project-link:hover { opacity: 0.7; }
 
-.pub-list { display:flex; flex-direction:column; gap:12px; }
-.pub-row { display:flex; align-items:flex-start; gap:16px; padding:18px 22px; background:var(--surface); border:1px solid var(--border); border-radius:10px; transition:all 0.25s; }
-.pub-row:hover { border-color:var(--accent); }
-.pub-row .pub-emoji { font-size:1.3rem; flex-shrink:0; margin-top:2px; }
-.pub-row h4 { font-size:0.95rem; font-weight:700; margin-bottom:3px; }
-.pub-row p { font-size:0.84rem; color:var(--ink-light); line-height:1.6; }
+    /* ── CONTENT / YOUTUBE ── */
+    #content { background: var(--surface); }
+    .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .content-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+    .content-card:hover { border-color: rgba(0,180,216,0.4); }
+    .content-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .content-icon { font-size: 1.75rem; }
+    .content-card h3 { font-size: 1rem; font-weight: 700; color: var(--white); }
+    .content-card .content-meta { font-size: 0.8rem; color: var(--accent); }
+    .article-list { list-style: none; }
+    .article-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+    .article-list li:last-child { border-bottom: none; }
+    .article-list a { color: var(--text); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .article-list a:hover { color: var(--accent); }
 
-.awards-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
-.award-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px; transition:all 0.25s; }
-.award-card:hover { border-color:var(--accent); transform:translateY(-2px); }
-.award-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:2px; }
-.award-card .award-issuer { font-size:0.82rem; color:var(--accent); font-weight:600; margin-bottom:8px; }
-.award-card p { font-size:0.84rem; color:var(--ink-light); line-height:1.6; }
+    /* ── CERTIFICATIONS & AWARDS ── */
+    #certs { background: var(--bg); }
+    .certs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .cert-list { list-style: none; }
+    .cert-list li {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      transition: border-color 0.2s;
+    }
+    .cert-list li:hover { border-color: rgba(0,180,216,0.4); }
+    .cert-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .cert-list li div { font-size: 0.88rem; color: var(--text); font-weight: 500; }
+    .cert-list li span { font-size: 0.75rem; color: var(--muted); display: block; margin-top: 0.1rem; }
 
-.ed-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-.ed-card { padding:22px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
-.ed-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:2px; }
-.ed-card .ed-sub { font-size:0.85rem; color:var(--accent); font-weight:600; margin-bottom:6px; }
-.ed-card p { font-size:0.84rem; color:var(--ink-light); }
+    /* ── EDUCATION ── */
+    #education { background: var(--surface); }
+    .edu-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      max-width: 700px;
+    }
+    .edu-icon { font-size: 2.5rem; flex-shrink: 0; }
+    .edu-card h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; }
+    .edu-card .degree { font-size: 0.88rem; color: var(--accent); font-weight: 600; margin-bottom: 0.25rem; }
+    .edu-card .year { font-size: 0.8rem; color: var(--muted); }
 
-.vol-card { padding:22px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
-.vol-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:2px; }
-.vol-card .vol-org { font-size:0.85rem; color:var(--accent); font-weight:600; margin-bottom:6px; }
-.vol-card p { font-size:0.84rem; color:var(--ink-light); line-height:1.6; }
+    /* ── CONTACT ── */
+    #contact { background: var(--bg); }
+    .contact-wrapper {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-wrapper h2 { font-size: 1.75rem; font-weight: 800; color: var(--white); margin-bottom: 0.75rem; }
+    .contact-wrapper p { color: var(--muted); margin-bottom: 2rem; }
+    .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+    .contact-link {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.85rem; font-weight: 500;
+      transition: all 0.2s;
+    }
+    .contact-link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+    .contact-email {
+      font-size: 1rem; color: var(--accent); font-weight: 600;
+      text-decoration: none;
+    }
 
-/* PLACEHOLDER */
-.placeholder { display:inline-block; padding:2px 8px; background:#fff3cd; border:1px dashed #e0c36a; border-radius:4px; font-family:var(--mono); font-size:0.78rem; color:#856404; }
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.8rem; color: var(--muted);
+    }
 
-/* WORKFLOW */
-.workflow { margin-top:48px; padding:32px; background:var(--surface); border:1px solid var(--border); border-radius:12px; }
-.workflow h3 { font-family:var(--serif); font-size:1.3rem; margin-bottom:12px; }
-.workflow > p { font-size:0.88rem; color:var(--ink-light); line-height:1.7; }
-.wf-steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-top:18px; }
-.wf-step { padding:16px; background:var(--bg-alt); border-radius:8px; text-align:center; }
-.wf-step .wf-num { font-family:var(--mono); font-size:0.68rem; color:var(--teal); letter-spacing:0.1em; margin-bottom:4px; }
-.wf-step p { font-size:0.82rem; color:var(--ink-light); }
-.wf-step code { font-family:var(--mono); font-size:0.78rem; color:var(--accent); background:var(--accent-soft); padding:1px 6px; border-radius:3px; }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav ul { gap: 1rem; }
+      nav ul a { font-size: 0.78rem; }
+      .about-grid, .content-grid, .certs-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+      .timeline::before { left: 12px; }
+      .timeline-item { padding-left: 42px; }
+      .timeline-dot { left: 4px; }
+      .contact-wrapper { padding: 2rem 1.5rem; }
+    }
 
-footer { padding:36px 0; border-top:1px solid var(--border); text-align:center; }
-footer p { font-size:0.78rem; color:var(--ink-lighter); }
-
-/* FADE */
-.fade-in { opacity:0; transform:translateY(16px); transition:opacity 0.5s ease, transform 0.5s ease; }
-.fade-in.visible { opacity:1; transform:translateY(0); }
-
-/* PRINT */
-@media print {
-  body { background:#fff; font-size:10.5pt; }
-  body::after, nav, .btn-pdf, .workflow, footer, .placeholder { display:none !important; }
-  .wrap { max-width:100%; padding:0 14px; }
-  .hero { padding:12px 0 10px; }
-  .hero-grid { grid-template-columns:1fr auto; gap:20px; }
-  .hero h1 { font-size:20pt; }
-  .hero h1 em { color:var(--accent); }
-  .hero-bio { font-size:10pt; margin-bottom:10px; }
-  section { padding:10px 0; }
-  .sec-title { font-size:13pt; margin-bottom:10px; }
-  .tl-item { padding-bottom:12px; }
-  .timeline { padding-left:18px; }
-  .tl-role { font-size:11pt; }
-  .tl-body { font-size:9pt; }
-  .ai-grid, .skills-cols, .proj-grid, .awards-grid, .ed-grid { gap:6px; }
-  .ai-card, .skill-group, .proj-card, .award-card, .pub-row, .ed-card, .vol-card, .stat-card { background:#fafafa; border-color:#ddd; box-shadow:none; page-break-inside:avoid; padding:12px; }
-  .stat-num { font-size:14pt; }
-  .stat-card { padding:10px; }
-  .hero-stats { gap:6px; }
-  * { animation:none !important; transition:none !important; }
-  .fade-in { opacity:1 !important; transform:none !important; }
-}
-
-/* RESPONSIVE */
-@media (max-width:768px) {
-  .hero-grid { grid-template-columns:1fr; gap:28px; }
-  .hero-stats { grid-template-columns:repeat(4,1fr); }
-  .stat-card { padding:14px 8px; }
-  .stat-num { font-size:1.3rem; }
-  .nav-links a.desk { display:none; }
-  .ed-grid { grid-template-columns:1fr; }
-}
-@media (max-width:480px) {
-  .hero-stats { grid-template-columns:repeat(2,1fr); }
-}
-</style>
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-inner > * { animation: fadeInUp 0.6s ease both; }
+    .hero-badge { animation-delay: 0.1s; }
+    .hero-avatar { animation-delay: 0.15s; }
+    .hero h1 { animation-delay: 0.2s; }
+    .hero-title { animation-delay: 0.25s; }
+    .hero-value { animation-delay: 0.3s; }
+    .hero-stats { animation-delay: 0.35s; }
+    .hero-btns { animation-delay: 0.4s; }
+  </style>
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <div class="nav-name">Praveen Kumar Singh</div>
-    <div class="nav-links">
-      <a href="#experience" class="desk">Experience</a>
-      <a href="#projects" class="desk">Projects</a>
-      <a href="#publications" class="desk">Content</a>
-      <button class="btn-pdf" onclick="window.print()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-        PDF
-      </button>
-    </div>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">PKS</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#certs">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-eyebrow"><span class="pulse"></span> Open to opportunities</div>
-        <h1>Senior Engineering<br>Manager &amp; <em>AI/ML Leader</em></h1>
-        <p class="hero-bio">
-          I build AI-powered healthcare systems at <strong>Optum (UnitedHealth Group)</strong>, leading cross-functional teams of 30+ engineers across the clinical domain. With 13+ years of hands-on engineering and leadership, I specialize in bringing Generative AI from prototype to production in regulated environments — while sharing what I learn through courses, videos, and open-source code.
-        </p>
-        <div class="hero-meta">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Hyderabad, India</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>Optum / UnitedHealth Group</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:praveenks30@gmail.com">praveenks30@gmail.com</a></span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><a href="https://linkedin.com/in/praveenks30" target="_blank">linkedin.com/in/praveenks30</a></span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg><a href="https://github.com/PraveenKS30" target="_blank">github.com/PraveenKS30</a></span>
-        </div>
-      </div>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-badge">🏥 Healthcare AI · Engineering Leadership</div>
+      <!-- ADD: Replace initials with professional headshot — see .hero-avatar below -->
+      <div class="hero-avatar">PK</div>
+      <h1>Praveen Kumar Singh</h1>
+      <div class="hero-title">Senior Engineering Manager · AI Leader · Healthcare Innovation</div>
+      <div class="hero-location">📍 Hyderabad, Telangana, India</div>
+      <p class="hero-value">
+        Leading 30+ engineers at Optum (UnitedHealth Group) to build AI-driven healthcare technology across U.S. clinical systems. 13+ years turning complex problems into scalable, patient-impacting solutions.
+      </p>
       <div class="hero-stats">
-        <div class="stat-card"><div class="stat-num">13+</div><div class="stat-label">Years Exp.</div></div>
-        <div class="stat-card"><div class="stat-num">30+</div><div class="stat-label">Engineers Led</div></div>
-        <div class="stat-card"><div class="stat-num">8K+</div><div class="stat-label">YouTube Subs</div></div>
-        <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">Published Courses</div></div>
+        <div class="stat"><span class="stat-num">13+</span><span class="stat-label">Years Experience</span></div>
+        <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Engineers Led</span></div>
+        <div class="stat"><span class="stat-num">8K+</span><span class="stat-label">YouTube Subscribers</span></div>
+        <div class="stat"><span class="stat-num">54★</span><span class="stat-label">GitHub Stars</span></div>
+      </div>
+      <div class="hero-btns">
+        <a href="https://www.linkedin.com/in/praveenks30/" target="_blank" class="btn btn-primary">💼 LinkedIn</a>
+        <a href="https://github.com/PraveenKS30" target="_blank" class="btn btn-outline">🐙 GitHub</a>
+        <a href="https://www.youtube.com/@TechyTacos" target="_blank" class="btn btn-outline">▶️ YouTube</a>
+        <a href="https://x.com/PraveenKS30" target="_blank" class="btn btn-outline">𝕏 Twitter</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="experience">
-  <div class="wrap">
-    <div class="sec-eyebrow">Career Journey</div>
-    <h2 class="sec-title">Professional Experience</h2>
-    <div class="timeline">
-
-      <div class="tl-item fade-in">
-        <div class="tl-dot"></div>
-        <div class="tl-head">
-          <div class="tl-role">Senior Engineering Manager</div>
-          <div class="tl-dates">Sep 2016 — Present</div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Engineering Leader. AI Enthusiast. Builder.</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Senior Engineering Manager at Optum (UnitedHealth Group), where I lead 30+ onshore and offshore engineers building healthcare technology that impacts millions of patients across the U.S. clinical domain. Over 11+ years at Optum — growing from Senior Software Engineer to Engineering Manager to my current role — I've developed deep expertise in architecting scalable systems and driving AI-powered transformation in healthcare.
+          </p>
+          <p>
+            My passion lies at the intersection of AI and healthcare: from leading Generative AI initiatives using LlamaIndex, OpenAI Agents SDK, and Google ADK, to mentoring teams to adopt modern engineering practices. I believe the best code is code that helps someone get healthier, faster.
+          </p>
+          <p>
+            Outside of Optum, I run <strong style="color:var(--accent)">TechyTacos</strong> on YouTube (8K+ subscribers), sharing tutorials on AI/ML, cloud, and backend engineering. I also write on Medium and contribute to open-source projects focused on Generative AI and cloud platforms.
+          </p>
         </div>
-        <div class="tl-company">Optum (UnitedHealth Group) · Hyderabad, India</div>
-        <div class="tl-body">
-          Leading development and maintenance of healthcare projects across multiple U.S. states, focused on the clinical domain. Managing onshore &amp; offshore teams of 30+ engineers.
-          <ul>
-            <li>Spearheading AI initiatives — launched <strong>Crimson AI</strong> to optimize operating room scheduling</li>
-            <li>Built <strong>AI-powered semantic mapper</strong> to align assessment questionnaires across vendors</li>
-            <li>Developed AI solution to extract <strong>SDOH insights</strong> from raw clinical notes for personalized care</li>
-            <li>Designed <strong>agentic workflow</strong> transforming raw data into valid HL7 FHIR formats</li>
-            <li>Won <strong>Make IT Happen 2023</strong> — Optum's top annual recognition for AI/ML innovation</li>
-            <li>Led winning teams at <strong>Clinical Z Hackathon</strong> in 2023 and 2024</li>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <div class="highlight-icon">🏆</div>
+            <div>
+              <h4>Clinical Z Hackathon Winner</h4>
+              <p>Won Optum's C&amp;S Clinical Hackathon in both 2023 &amp; 2024 — back-to-back recognition for AI-driven healthcare innovation.</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🤖</div>
+            <div>
+              <h4>AI-First Engineering Leader</h4>
+              <p>Leading AI initiatives at Optum including Generative AI, RAG pipelines, and LLM-powered clinical tools using OpenAI, LlamaIndex &amp; Google ADK.</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">📺</div>
+            <div>
+              <h4>Content Creator — TechyTacos</h4>
+              <p>8K+ subscribers on YouTube. Educating developers on Generative AI, Cloud, Kafka, Spring Boot, and modern engineering.</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🐍</div>
+            <div>
+              <h4>HackerRank Python Gold Badge</h4>
+              <p>Recognized for Python proficiency; active on competitive coding platforms and open-source AI projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">Career Timeline</div>
+      <h2 class="section-title">Work Experience</h2>
+      <div class="timeline">
+
+        <!-- Role 1: SEM -->
+        <div class="timeline-item">
+          <div class="timeline-dot current"></div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Senior Engineering Manager</div>
+              <div class="exp-date">Feb 2024 – Present</div>
+            </div>
+            <div class="exp-company">Optum (UnitedHealth Group) <span class="company-badge">Current</span> · Hyderabad, India</div>
+            <ul class="exp-bullets">
+              <li>Leading <strong>30+ engineers</strong> across onshore and offshore teams driving healthcare technology initiatives across multiple U.S. states in the clinical domain.</li>
+              <li>Spearheading <strong>AI-driven initiatives</strong> including Generative AI, RAG pipelines, and LLM-based clinical tools using OpenAI, LlamaIndex, and Google ADK.</li>
+              <li>Overseeing real-time clinical systems to maintain operational excellence and zero-downtime deployments across critical patient-facing applications.</li>
+              <li>Collaborating with architects and business stakeholders to drive <strong>strategic technology solutioning</strong> and long-range engineering roadmaps.</li>
+              <li>Back-to-back winner of the <strong>Clinical Z: C&amp;S Hackathon (2023 &amp; 2024)</strong> for delivering AI-powered innovation in healthcare workflows.</li>
+              <li>Recognized with <strong>Make IT Happen 2023</strong> award for exceptional delivery and impact.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2: EM -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Engineering Manager</div>
+              <div class="exp-date">Feb 2022 – Feb 2024</div>
+            </div>
+            <div class="exp-company">Optum (UnitedHealth Group) · Hyderabad, India</div>
+            <ul class="exp-bullets">
+              <li>Managed cross-functional engineering squads delivering clinical-domain products for U.S. healthcare markets, ensuring Agile ceremonies, velocity tracking, and sprint health.</li>
+              <li>Drove <strong>team building and talent development</strong> — hiring, onboarding, and mentoring senior engineers for high-impact clinical tech roles.</li>
+              <li>Initiated adoption of modern cloud-native and AI tooling across the engineering organization.</li>
+              <li>Collaborated with product, architecture, and business stakeholders to translate clinical requirements into scalable technical solutions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3: SEL -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Software Engineering Lead</div>
+              <div class="exp-date">Feb 2019 – Feb 2022</div>
+            </div>
+            <div class="exp-company">Optum (UnitedHealth Group) · Hyderabad, India</div>
+            <ul class="exp-bullets">
+              <li>Led backend engineering teams building clinical-domain applications; responsible for end-to-end design, delivery, and production support.</li>
+              <li>Architected data pipelines using <strong>Apache Kafka, Spark, and Sybase</strong> for real-time clinical data processing.</li>
+              <li>Drove adoption of <strong>HL7/FHIR standards</strong> in clinical system integrations, improving interoperability across healthcare systems.</li>
+              <li>Mentored junior and mid-level engineers, conducting technical reviews and establishing coding standards across the team.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 4: SSE -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Senior Software Engineer</div>
+              <div class="exp-date">Apr 2015 – Feb 2019</div>
+            </div>
+            <div class="exp-company">Optum (UnitedHealth Group) · Hyderabad, India</div>
+            <ul class="exp-bullets">
+              <li>Designed and developed enterprise-scale backend services in <strong>Java and Python</strong> for clinical and administrative healthcare platforms.</li>
+              <li>Worked with <strong>Sybase, Oracle, and MySQL</strong> databases supporting high-volume transactional systems.</li>
+              <li>Contributed to cloud migration initiatives moving legacy on-prem systems to <strong>AWS and Azure</strong>.</li>
+              <li>Built automation scripts and internal tools that reduced manual developer effort and improved release velocity.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 5: Syntel -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Software Engineer</div>
+              <div class="exp-date">Nov 2011 – Mar 2015</div>
+            </div>
+            <div class="exp-company">Syntel · Pune, India</div>
+            <ul class="exp-bullets">
+              <li>Developed and maintained enterprise Java applications for client engagements across banking and insurance domains.</li>
+              <li>Participated in full SDLC: requirements analysis, design, coding, testing, and production deployment.</li>
+              <li>Collaborated in Agile teams delivering incremental product releases on schedule.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Technical Skills</div>
+      <h2 class="section-title">Expertise &amp; Technologies</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-title">🤖 AI / Generative AI</div>
+          <div class="skill-tags">
+            <span class="skill-tag hot">OpenAI API</span>
+            <span class="skill-tag hot">OpenAI Agents SDK</span>
+            <span class="skill-tag hot">Google ADK</span>
+            <span class="skill-tag hot">LlamaIndex</span>
+            <span class="skill-tag hot">RAG Pipelines</span>
+            <span class="skill-tag">Spring AI</span>
+            <span class="skill-tag">Azure OpenAI</span>
+            <span class="skill-tag">LLMOps</span>
+            <span class="skill-tag">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">☁️ Cloud Platforms</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">GCP</span>
+            <span class="skill-tag">Azure OpenAI Service</span>
+            <span class="skill-tag">Azure SDK (Python)</span>
+            <span class="skill-tag">GCP SDK (Python)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">💻 Languages &amp; Frameworks</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">📊 Data &amp; Streaming</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Apache Kafka</span>
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">Databricks</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Sybase</span>
+            <span class="skill-tag">Oracle</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">🏥 Healthcare &amp; Integration</div>
+          <div class="skill-tags">
+            <span class="skill-tag">HL7 / FHIR</span>
+            <span class="skill-tag">Clinical Systems</span>
+            <span class="skill-tag">Healthcare Interoperability</span>
+            <span class="skill-tag">FHIR Validator</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">🧑‍💼 Leadership &amp; Management</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Cross-functional Team Leadership</span>
+            <span class="skill-tag">Agile / Scrum</span>
+            <span class="skill-tag">Team Building</span>
+            <span class="skill-tag">Stakeholder Management</span>
+            <span class="skill-tag">Technical Roadmapping</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">Open Source</div>
+      <h2 class="section-title">GitHub Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-name">🤖 GenerativeAI</div>
+            <div class="project-stars">⭐ 15 · 🍴 14</div>
+          </div>
+          <p class="project-desc">Build Generative AI applications using LlamaIndex and Spring AI — chatbots, document summarizers, and content generators powered by OpenAI with a Streamlit UI.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span><span class="tech-badge">Java</span><span class="tech-badge">LlamaIndex</span><span class="tech-badge">Spring AI</span><span class="tech-badge">OpenAI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PraveenKS30/GenerativeAI" target="_blank" class="project-link">🐙 GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-name">🔷 Getting Started — Google ADK</div>
+            <div class="project-stars">⭐ 15 · 🍴 3</div>
+          </div>
+          <p class="project-desc">Hands-on guide to building AI agents with Google's Agent Development Kit (ADK). One of the earliest community resources for Google ADK.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span><span class="tech-badge">Google ADK</span><span class="tech-badge">AI Agents</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PraveenKS30/getting-started-google-adk" target="_blank" class="project-link">🐙 GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-name">☁️ Access Azure Using Python</div>
+            <div class="project-stars">⭐ 14 · 🍴 15</div>
+          </div>
+          <p class="project-desc">Sample code snippets and tutorials to access and interact with Azure services using the Python SDK — widely used as a reference by the community.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span><span class="tech-badge">Azure</span><span class="tech-badge">Azure SDK</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PraveenKS30/Access-Azure-Using-Python" target="_blank" class="project-link">🐙 GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-name">🧠 OpenAI Agents SDK</div>
+            <div class="project-stars">⭐ 10 · 🍴 3</div>
+          </div>
+          <p class="project-desc">Step-by-step guide to working with the OpenAI Agents SDK — covering agent creation, tool use, handoffs, and building multi-agent workflows.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span><span class="tech-badge">OpenAI Agents SDK</span><span class="tech-badge">LLM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PraveenKS30/openai_agents_sdk" target="_blank" class="project-link">🐙 GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-name">🌱 Spring AI</div>
+            <div class="project-stars">⭐ 6 · 🍴 10</div>
+          </div>
+          <p class="project-desc">Getting started with Spring AI — integrating ChatClient, VectorStore, and DocumentReader into Spring Boot applications for AI-powered Java backends.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Java</span><span class="tech-badge">Spring Boot</span><span class="tech-badge">Spring AI</span><span class="tech-badge">OpenAI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PraveenKS30/Spring-AI" target="_blank" class="project-link">🐙 GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-name">🏥 HL7 FHIR Validator</div>
+            <div class="project-stars">Java</div>
+          </div>
+          <p class="project-desc">FHIR validator implementation in Java for validating HL7 FHIR resources — useful for healthcare system integration and compliance testing.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Java</span><span class="tech-badge">HL7</span><span class="tech-badge">FHIR</span><span class="tech-badge">Healthcare</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/PraveenKS30/hl7_fhir_validator" target="_blank" class="project-link">🐙 GitHub</a>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="https://github.com/PraveenKS30?tab=repositories" target="_blank" class="btn btn-outline">View All 23 Repositories →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section id="content">
+    <div class="container">
+      <div class="section-label">Content &amp; Writing</div>
+      <h2 class="section-title">TechyTacos &amp; Publications</h2>
+      <div class="content-grid">
+
+        <div class="content-card">
+          <div class="content-card-header">
+            <div class="content-icon">▶️</div>
+            <div>
+              <h3>TechyTacos — YouTube</h3>
+              <div class="content-meta">8,000+ Subscribers</div>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">
+            Engineering tutorials covering Generative AI, OpenAI Agents, Google ADK, LlamaIndex, Spring AI, Apache Kafka, Spark, Azure, and cloud-native development.
+          </p>
+          <a href="https://www.youtube.com/@TechyTacos" target="_blank" class="btn btn-outline" style="font-size:0.8rem; padding:0.5rem 1rem;">Visit Channel →</a>
+        </div>
+
+        <div class="content-card">
+          <div class="content-card-header">
+            <div class="content-icon">✍️</div>
+            <div>
+              <h3>Medium — Tech Articles</h3>
+              <div class="content-meta">Published Author</div>
+            </div>
+          </div>
+          <ul class="article-list">
+            <li><a href="https://medium.com/@praveenks30" target="_blank">▸ Mastering Basics of OpenAI Agents SDK</a></li>
+            <li><a href="https://medium.com/@praveenks30" target="_blank">▸ 75 Interview Questions on Kafka and Spring Kafka</a></li>
+            <li><a href="https://medium.com/@praveenks30" target="_blank">▸ Query Your Custom Documents Using LlamaIndex</a></li>
+            <li><a href="https://medium.com/@praveenks30" target="_blank">▸ More articles on Medium →</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & AWARDS -->
+  <section id="certs">
+    <div class="container">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-title">Certifications &amp; Awards</h2>
+      <div class="certs-grid">
+        <div>
+          <p class="section-label" style="margin-bottom:1rem; font-size:0.75rem;">📜 Certifications</p>
+          <ul class="cert-list">
+            <li>
+              <span class="cert-icon">🎓</span>
+              <div>Machine Learning Nanodegree Term 1<span>Udacity</span></div>
+            </li>
+            <li>
+              <span class="cert-icon">🎓</span>
+              <div>Data Engineering Nanodegree<span>Udacity</span></div>
+            </li>
+            <li>
+              <span class="cert-icon">🤖</span>
+              <div>AI Agents Fundamentals<span>Certification</span></div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="section-label" style="margin-bottom:1rem; font-size:0.75rem;">🏆 Awards &amp; Recognition</p>
+          <ul class="cert-list">
+            <li>
+              <span class="cert-icon">🥇</span>
+              <div>Clinical Z: C&amp;S Hackathon Winner<span>Optum · 2024</span></div>
+            </li>
+            <li>
+              <span class="cert-icon">🥇</span>
+              <div>Clinical Z: C&amp;S Hackathon Winner<span>Optum · 2023</span></div>
+            </li>
+            <li>
+              <span class="cert-icon">⭐</span>
+              <div>Make IT Happen Award<span>Optum · 2023</span></div>
+            </li>
+            <li>
+              <span class="cert-icon">🐍</span>
+              <div>Python Gold Badge<span>HackerRank</span></div>
+            </li>
           </ul>
         </div>
       </div>
-
-      <div class="tl-item fade-in">
-        <div class="tl-dot"></div>
-        <div class="tl-head">
-          <div class="tl-role">Co-Founder &amp; Tech Lead</div>
-          <div class="tl-dates">~8 Years (Parallel)</div>
-        </div>
-        <div class="tl-company">MyFab11 — Fantasy Sports Platform · India</div>
-        <div class="tl-body">
-          Built a fantasy sports platform from the ground up, covering Cricket, Football, Basketball, and Kabaddi.
-          <ul>
-            <li>Grew from 0 → 10K downloads in 3 years, then scaled to <strong>100K+ downloads</strong> in 10 months</li>
-            <li>Owned full product lifecycle — architecture, dev, payment integrations, real-time scoring, retention</li>
-            <li>Managed brand partnerships and user growth strategies</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item fade-in">
-        <div class="tl-dot"></div>
-        <div class="tl-head">
-          <div class="tl-role"><span class="placeholder">✏️ Previous Role Title</span></div>
-          <div class="tl-dates"><span class="placeholder">✏️ Dates</span></div>
-        </div>
-        <div class="tl-company"><span class="placeholder">✏️ Company Name · Location</span></div>
-        <div class="tl-body">
-          <span class="placeholder">✏️ Add your earlier career history. Recruiters need to see your full progression — every title, company, and key achievements before Optum.</span>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="ai-work">
-  <div class="wrap">
-    <div class="sec-eyebrow">Innovation</div>
-    <h2 class="sec-title">Generative AI Initiatives</h2>
-    <div class="ai-grid">
-      <div class="ai-card fade-in">
-        <div class="ai-icon" style="background:var(--accent-soft);">🧠</div>
-        <h4>AI Semantic Mapper</h4>
-        <p>Aligns assessment questionnaires across vendors for seamless data standardization in healthcare systems.</p>
-      </div>
-      <div class="ai-card fade-in">
-        <div class="ai-icon" style="background:var(--teal-soft);">🏥</div>
-        <h4>SDOH Insights Extraction</h4>
-        <p>Extracts Social Determinants of Health from raw clinical notes to enable personalized care interventions.</p>
-      </div>
-      <div class="ai-card fade-in">
-        <div class="ai-icon" style="background:var(--accent-soft);">🔄</div>
-        <h4>Agentic HL7 FHIR Workflow</h4>
-        <p>Transforms raw data into valid HL7 FHIR formats via agentic workflow, ensuring interoperability &amp; compliance.</p>
-      </div>
-      <div class="ai-card fade-in">
-        <div class="ai-icon" style="background:var(--teal-soft);">🤖</div>
-        <h4>Multi-Agent Systems</h4>
-        <p>R&amp;D on multi-agent workflows using Google ADK, OpenAI Agents SDK, LangChain, and LlamaIndex.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="sec-eyebrow">Technical Expertise</div>
-    <h2 class="sec-title">Skills &amp; Technologies</h2>
-    <div class="skills-cols">
-      <div class="skill-group fade-in">
-        <div class="skill-group-title">AI / ML</div>
-        <div class="skill-tags">
-          <span class="stag">Generative AI</span><span class="stag">OpenAI API</span><span class="stag">Claude</span><span class="stag">Gemini</span><span class="stag">LlamaIndex</span><span class="stag">LangChain</span><span class="stag">RAG</span><span class="stag">Prompt Engineering</span><span class="stag">Multi-Agent Systems</span>
-        </div>
-      </div>
-      <div class="skill-group fade-in">
-        <div class="skill-group-title">Cloud & Infra</div>
-        <div class="skill-tags">
-          <span class="stag">GCP</span><span class="stag">Vertex AI</span><span class="stag">Cloud Run</span><span class="stag">Pub/Sub</span><span class="stag">Azure</span><span class="stag">Docker</span><span class="stag">Kubernetes</span><span class="stag">CI/CD</span>
-        </div>
-      </div>
-      <div class="skill-group fade-in">
-        <div class="skill-group-title">Backend & Data</div>
-        <div class="skill-tags">
-          <span class="stag">Python</span><span class="stag">Java</span><span class="stag">FastAPI</span><span class="stag">Spring Boot</span><span class="stag">Spring AI</span><span class="stag">Kafka</span><span class="stag">PostgreSQL</span><span class="stag">MongoDB</span>
-        </div>
-      </div>
-      <div class="skill-group fade-in">
-        <div class="skill-group-title">Healthcare</div>
-        <div class="skill-tags">
-          <span class="stag">HL7 FHIR</span><span class="stag">SNOMED CT</span><span class="stag">LOINC</span><span class="stag">Clinical Workflows</span><span class="stag">EHR Systems</span><span class="stag">HIPAA</span><span class="stag">AHM 250</span>
-        </div>
-      </div>
-      <div class="skill-group fade-in">
-        <div class="skill-group-title">Leadership</div>
-        <div class="skill-tags">
-          <span class="stag">Team Management (30+)</span><span class="stag">Agile / Scrum</span><span class="stag">Onshore-Offshore</span><span class="stag">Stakeholder Mgmt</span><span class="stag">Mentoring</span><span class="stag">Strategic Solutioning</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="wrap">
-    <div class="sec-eyebrow">Open Source</div>
-    <h2 class="sec-title">Featured GitHub Projects</h2>
-    <div class="proj-grid">
-      <div class="proj-card fade-in">
-        <h4>Access-Azure-Using-Python</h4>
-        <p class="proj-desc">Code snippets for Azure Services (Key Vault, Blob Storage, Functions) using Python.</p>
-        <div class="proj-meta"><span>⭐ 14</span><span>🍴 14</span><span>Python</span></div>
-        <a class="proj-link" href="https://github.com/PraveenKS30/Access-Azure-Using-Python" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card fade-in">
-        <h4>GenerativeAI</h4>
-        <p class="proj-desc">Guide to building generative AI apps with OpenAI, Spring Boot, and Streamlit.</p>
-        <div class="proj-meta"><span>⭐ 14</span><span>🍴 12</span><span>Python + Java</span></div>
-        <a class="proj-link" href="https://github.com/PraveenKS30/GenerativeAI" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card fade-in">
-        <h4>OpenAI Agents SDK</h4>
-        <p class="proj-desc">Learning resource for OpenAI Agent SDK — tools, multi-turn conversations, patterns.</p>
-        <div class="proj-meta"><span>⭐ 8</span><span>🍴 3</span><span>Python</span></div>
-        <a class="proj-link" href="https://github.com/PraveenKS30/openai_agents_sdk" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card fade-in">
-        <h4>Spring AI</h4>
-        <p class="proj-desc">Getting started with Spring AI — integrating LLMs into Java/Spring Boot apps.</p>
-        <div class="proj-meta"><span>⭐ 4</span><span>🍴 6</span><span>Java</span></div>
-        <a class="proj-link" href="https://github.com/PraveenKS30/Spring-AI" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card fade-in">
-        <h4>Google ADK</h4>
-        <p class="proj-desc">Beginner guide for Google's AI Development Kit with walkthroughs.</p>
-        <div class="proj-meta"><span>⭐ 3</span><span>🍴 1</span><span>Python</span></div>
-        <a class="proj-link" href="https://github.com/PraveenKS30/google-adk" target="_blank">View on GitHub →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="publications">
-  <div class="wrap">
-    <div class="sec-eyebrow">Knowledge Sharing</div>
-    <h2 class="sec-title">Publications &amp; Content</h2>
-    <div class="pub-list">
-      <div class="pub-row fade-in">
-        <div class="pub-emoji">📺</div>
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label">Education</div>
+      <h2 class="section-title">Academic Background</h2>
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
         <div>
-          <h4>YouTube — AI &amp; Cloud (8K+ subscribers)</h4>
-          <p>Weekly videos on Generative AI, LLMs, Azure, and engineering best practices. <a href="https://www.youtube.com/thingstoknow30" target="_blank">Watch →</a></p>
-        </div>
-      </div>
-      <div class="pub-row fade-in">
-        <div class="pub-emoji">🎓</div>
-        <div>
-          <h4>Udemy Courses (7 Published)</h4>
-          <p>OpenAI Agents SDK, LlamaIndex, Apache Kafka, Talend ETL, and more. <a href="https://www.udemy.com/user/54e02ba4ccf1e/" target="_blank">View Courses →</a></p>
-        </div>
-      </div>
-      <div class="pub-row fade-in">
-        <div class="pub-emoji">📖</div>
-        <div>
-          <h4>Medium Articles</h4>
-          <p>AI/ML, system design, Kafka patterns, and engineering practices. <a href="https://medium.com/@praveenkumarsingh" target="_blank">Read →</a></p>
-        </div>
-      </div>
-      <div class="pub-row fade-in">
-        <div class="pub-emoji">📱</div>
-        <div>
-          <h4>Healthcare Domain App (AHM 250)</h4>
-          <p>Free Android app for healthcare domain knowledge based on the AHM 250 certification guide.</p>
+          <h3>Inderprastha Engineering College, Ghaziabad</h3>
+          <div class="degree">Bachelor of Technology (B.Tech.) — Information Technology</div>
+          <div class="year">2007 – 2011</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="awards">
-  <div class="wrap">
-    <div class="sec-eyebrow">Recognition</div>
-    <h2 class="sec-title">Awards &amp; Honors</h2>
-    <div class="awards-grid">
-      <div class="award-card fade-in">
-        <h4>🏆 Make IT Happen 2023</h4>
-        <div class="award-issuer">Optum · May 2024</div>
-        <p>Prestigious annual award for exceptional AI/ML innovation and system design.</p>
-      </div>
-      <div class="award-card fade-in">
-        <h4>🥇 Clinical Z Hackathon 2024</h4>
-        <div class="award-issuer">Optum · Jan 2024</div>
-        <p>Led winning team in rapid prototyping innovative healthcare solutions.</p>
-      </div>
-      <div class="award-card fade-in">
-        <h4>🥇 Clinical Z Hackathon 2023</h4>
-        <div class="award-issuer">Optum · Jan 2023</div>
-        <p>Spearheaded team to hackathon victory with exceptional technical leadership.</p>
-      </div>
-      <div class="award-card fade-in">
-        <h4>🏅 HackerRank Python Gold Badge</h4>
-        <div class="award-issuer">HackerRank</div>
-        <p>Mastery in Python — algorithms, problem-solving, and coding best practices.</p>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <h2>Let's Connect</h2>
+        <p>Open to conversations on AI in healthcare, engineering leadership, speaking opportunities, and content collaboration.</p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/praveenks30/" target="_blank" class="contact-link">💼 LinkedIn</a>
+          <a href="https://github.com/PraveenKS30" target="_blank" class="contact-link">🐙 GitHub</a>
+          <a href="https://www.youtube.com/@TechyTacos" target="_blank" class="contact-link">▶️ TechyTacos</a>
+          <a href="https://x.com/PraveenKS30" target="_blank" class="contact-link">𝕏 Twitter/X</a>
+          <a href="https://medium.com/@praveenks30" target="_blank" class="contact-link">✍️ Medium</a>
+        </div>
+        <a href="mailto:c2praveen30jun@gmail.com" class="contact-email">c2praveen30jun@gmail.com</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="education">
-  <div class="wrap">
-    <div class="sec-eyebrow">Credentials</div>
-    <h2 class="sec-title">Education &amp; Certifications</h2>
-    <div class="ed-grid">
-      <div class="ed-card fade-in">
-        <h4>🎓 <span class="placeholder">✏️ Your Degree (e.g., B.Tech CS)</span></h4>
-        <div class="ed-sub"><span class="placeholder">✏️ University Name</span></div>
-        <p><span class="placeholder">✏️ Graduation Year</span></p>
-      </div>
-      <div class="ed-card fade-in">
-        <h4>☁️ Azure Certification</h4>
-        <div class="ed-sub">Microsoft · Sep 2019</div>
-        <p><span class="placeholder">✏️ Specify cert (AZ-900, AZ-104, etc.)</span></p>
-      </div>
-      <div class="ed-card fade-in">
-        <h4>🏥 AHM 250 — Healthcare</h4>
-        <div class="ed-sub">Credential ID: PraveenKS30</div>
-        <p>Healthcare administration and managed care knowledge.</p>
-      </div>
-      <div class="ed-card fade-in">
-        <h4><span class="placeholder">✏️ Add more certs (AWS, GCP, Kafka, etc.)</span></h4>
-        <div class="ed-sub"><span class="placeholder">✏️ Issuer · Date</span></div>
-        <p><span class="placeholder">✏️ Details</span></p>
-      </div>
-    </div>
-  </div>
-</section>
+  <footer>
+    <p>© 2026 Praveen Kumar Singh · Senior Engineering Manager &amp; AI Leader · Built with ❤️ and open source</p>
+  </footer>
 
-<section>
-  <div class="wrap">
-    <div class="sec-eyebrow">Giving Back</div>
-    <h2 class="sec-title">Volunteering</h2>
-    <div class="vol-card fade-in">
-      <h4>Children's Health Support</h4>
-      <div class="vol-org">Charitable Cause</div>
-      <p>Donated to help a child with lung surgery. Actively involved in supporting children's health and well-being.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <p>© <span id="yr"></span> Praveen Kumar Singh · <a href="https://linkedin.com/in/praveenks30" target="_blank">LinkedIn</a> · <a href="https://github.com/PraveenKS30" target="_blank">GitHub</a> · <a href="https://www.youtube.com/thingstoknow30" target="_blank">YouTube</a></p>
-  </div>
-</footer>
-
-<script>
-document.getElementById('yr').textContent=new Date().getFullYear();
-const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.08});
-document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
-</script>
 </body>
 </html>
