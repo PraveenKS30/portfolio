@@ -238,6 +238,46 @@
     }
     .skill-tag:hover, .skill-tag.hot { border-color: var(--accent); color: var(--accent); background: rgba(43,138,124,0.07); }
 
+    /* KEY PROGRAMS (inside exp-card) */
+    .key-programs { margin-top: 1.2rem; }
+    .key-programs-label {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1.2px; color: var(--accent); margin-bottom: 0.8rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .key-programs-label::before { content: ''; width: 16px; height: 2px; background: var(--accent); border-radius: 2px; }
+    .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem; }
+    .program-chip {
+      background: var(--section-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .program-chip::before {
+      content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2));
+      border-radius: 3px 0 0 3px;
+    }
+    .program-chip:hover { border-color: var(--accent); box-shadow: var(--card-shadow); }
+    .program-chip-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; }
+    .program-chip-name { font-size: 0.85rem; font-weight: 700; color: var(--primary); }
+    .program-chip-status {
+      font-size: 0.64rem; font-weight: 700; padding: 0.15rem 0.5rem;
+      border-radius: 20px; white-space: nowrap;
+    }
+    .chip-status-live { background: rgba(34,197,94,0.1); color: #16a34a; border: 1px solid rgba(34,197,94,0.2); }
+    .chip-status-active { background: rgba(234,179,8,0.1); color: #b45309; border: 1px solid rgba(234,179,8,0.25); }
+    .program-chip-team { font-size: 0.72rem; color: var(--accent); font-weight: 600; margin-bottom: 0.4rem; }
+    .program-chip-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; margin-bottom: 0.55rem; }
+    .program-chip-tech { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .program-chip-tech span {
+      background: rgba(43,138,124,0.08); border: 1px solid rgba(43,138,124,0.18);
+      color: var(--accent); padding: 0.12rem 0.45rem;
+      border-radius: 4px; font-size: 0.66rem; font-weight: 600;
+    }
+
     /* PROJECTS */
     #projects { background: var(--bg); }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(315px, 1fr)); gap: 1.3rem; }
@@ -396,7 +436,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#speaking">Speaking</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#projects">Open Source</a></li>
       <li><a href="#content">Content</a></li>
       <li><a href="#certs">Certs</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -493,11 +533,54 @@
             <div class="exp-company">Optum (UnitedHealth Group) <span class="company-badge">Current</span> · Hyderabad, India</div>
             <ul class="exp-bullets">
               <li>Leading <strong>30+ engineers</strong> across onshore and offshore teams driving healthcare technology across multiple U.S. clinical systems.</li>
-              <li>Spearheading <strong>Generative AI initiatives</strong> — RAG pipelines, OpenAI Agents SDK, LlamaIndex, and Google ADK — reducing manual clinical workflow effort by 30%+.</li>
+              <li>Spearheading <strong>Generative AI initiatives</strong> — reducing manual clinical workflow effort by <strong>30%+</strong>.</li>
               <li>Overseeing real-time clinical systems ensuring <strong>zero-downtime deployments</strong> across critical patient-facing applications.</li>
               <li>Collaborating with architects and business stakeholders to define multi-year technical roadmaps aligned with U.S. healthcare compliance requirements.</li>
-              <li>Back-to-back winner of <strong>Clinical Z: C&amp;S Hackathon (2023 &amp; 2024)</strong>; awarded <strong>Make IT Happen 2023</strong>.</li>
             </ul>
+
+            <!-- KEY PROGRAMS -->
+            <div class="key-programs">
+              <div class="key-programs-label">Key Programs</div>
+              <div class="programs-grid">
+
+                <div class="program-chip">
+                  <div class="program-chip-header">
+                    <div class="program-chip-name">🤖 Virtual Care Management</div>
+                    <span class="program-chip-status chip-status-active">🟡 In Dev</span>
+                  </div>
+                  <div class="program-chip-team">👥 2 Teams · 16+ Engineers</div>
+                  <p class="program-chip-desc">AI Agent program delivering real-time care via chat &amp; outbound calls for diabetes and chronic disease management across multiple US states. Coordinating with Hippocratic AI + Avery Chat; clinical data via REST APIs &amp; MCP Servers.</p>
+                  <div class="program-chip-tech">
+                    <span>AI Agents</span><span>MCP Servers</span><span>Hippocratic AI</span><span>REST APIs</span>
+                  </div>
+                </div>
+
+                <div class="program-chip">
+                  <div class="program-chip-header">
+                    <div class="program-chip-name">🏥 Clinical Profile</div>
+                    <span class="program-chip-status chip-status-live">🟢 Live</span>
+                  </div>
+                  <div class="program-chip-team">👥 1 Team · 8+ Engineers</div>
+                  <p class="program-chip-desc">Built from scratch — centralized care manager portal surfacing Assessments, Care Team, Quality Gaps, Medications &amp; Encounters. Live in <strong>20+ states</strong>, used by <strong>500+ care managers</strong> daily. Phase 2: AI Clinical Insights layer.</p>
+                  <div class="program-chip-tech">
+                    <span>React</span><span>Go</span><span>MongoDB Atlas</span><span>LLM</span>
+                  </div>
+                </div>
+
+                <div class="program-chip">
+                  <div class="program-chip-header">
+                    <div class="program-chip-name">⚙️ DataRaft</div>
+                    <span class="program-chip-status chip-status-active">🟡 In Dev</span>
+                  </div>
+                  <div class="program-chip-team">👥 1 Team · 8+ Engineers</div>
+                  <p class="program-chip-desc">Agentic clinical data pipeline processing <strong>millions of records</strong>. Core AI agent auto-converts raw JSON → HL7-valid FHIR using Azure OpenAI — replacing a manual, human-driven process.</p>
+                  <div class="program-chip-tech">
+                    <span>Python</span><span>Azure OpenAI</span><span>HL7 FHIR</span><span>Agentic AI</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
 
@@ -515,6 +598,26 @@
               <li>Initiated adoption of cloud-native and AI tooling, upskilling the team in Python, Kafka, and Azure cloud services.</li>
               <li>Partnered with product and architecture teams to decompose clinical requirements into scalable, HIPAA-compliant designs.</li>
             </ul>
+
+            <!-- KEY PROGRAMS -->
+            <div class="key-programs">
+              <div class="key-programs-label">Key Programs</div>
+              <div class="programs-grid">
+
+                <div class="program-chip">
+                  <div class="program-chip-header">
+                    <div class="program-chip-name">🔔 ADT Realtime</div>
+                    <span class="program-chip-status chip-status-live">🟢 Live</span>
+                  </div>
+                  <div class="program-chip-team">👥 1 Team · 3–5 Engineers</div>
+                  <p class="program-chip-desc">Delivers real-time <strong>Admission, Discharge &amp; Transfer (ADT)</strong> alerts to care managers via the Community Care portal. Integrated with the <strong>Enterprise Clinical Data Hub (ECDH)</strong> to acquire member ADT events, applied business transformation rules, and published records in <strong>FHIR format</strong> to the CC platform — enabling timely, care manager-centric interventions.</p>
+                  <div class="program-chip-tech">
+                    <span>Apache Kafka</span><span>Boomi</span><span>GCP</span><span>HL7 FHIR</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
 
