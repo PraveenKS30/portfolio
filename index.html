@@ -156,52 +156,26 @@
     .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: start; max-width: 1080px; }
     .about-text p { color: var(--muted); margin-bottom: 1rem; font-size: 0.96rem; }
     /* AI Spotlight */
-    .ai-spotlight { display: flex; flex-direction: column; gap: 0.6rem; }
-    .spotlight-header {
-      display: flex; align-items: center; gap: 0.6rem;
-      margin-bottom: 0.5rem;
-      padding-bottom: 0.7rem;
-      border-bottom: 1.5px solid var(--border);
-    }
-    .spotlight-bulb {
-      display: flex; align-items: center; justify-content: center;
-      width: 2.1rem; height: 2.1rem; border-radius: 50%;
-      background: linear-gradient(145deg, #fde84a, #f5a623);
-      box-shadow: 0 0 0 3px rgba(245,166,35,0.18), 0 0 16px rgba(245,166,35,0.5);
-      font-size: 1.05rem; flex-shrink: 0;
-      animation: bulb-pulse 2.8s ease-in-out infinite;
-    }
-    @keyframes bulb-pulse {
-      0%, 100% { box-shadow: 0 0 0 3px rgba(245,166,35,0.18), 0 0 10px rgba(245,166,35,0.42); }
-      50%       { box-shadow: 0 0 0 5px rgba(245,166,35,0.28), 0 0 22px rgba(245,166,35,0.65); }
-    }
-    .spotlight-header h4 { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); margin: 0; }
+    .ai-spotlight { display: flex; flex-direction: column; gap: 0; }
+    .spotlight-header { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.55rem; }
+    .spotlight-star { color: var(--accent); font-size: 0.85rem; line-height: 1; }
+    .spotlight-header h4 { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); margin: 0; }
     .spotlight-header h4 span { color: var(--accent); }
-    .spotlight-tile {
+    .spotlight-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-left: 3px solid var(--accent);
       border-radius: 10px;
-      padding: 0.7rem 0.95rem;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-      cursor: default;
+      padding: 0.85rem 1rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    .spotlight-tile:hover {
-      border-color: var(--accent);
-      border-left-color: var(--accent2);
-      box-shadow: var(--card-shadow);
-      transform: translateX(3px);
-    }
-    .spotlight-tile-top { display: flex; align-items: center; gap: 0.65rem; }
-    .spotlight-icon {
-      font-size: 1.15rem; flex-shrink: 0;
-      width: 2rem; height: 2rem;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--tag-bg); border-radius: 8px;
-    }
-    .spotlight-content { flex: 1; }
-    .spotlight-title { font-size: 0.8rem; font-weight: 600; color: var(--text); line-height: 1.35; margin: 0 0 0.25rem 0; }
-    .spotlight-tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.12rem 0.45rem; border-radius: 20px; background: var(--tag-bg); color: var(--accent); }
+    .spotlight-card:hover { border-color: var(--accent); box-shadow: var(--card-shadow); }
+    .spotlight-item { display: flex; align-items: baseline; gap: 0.55rem; padding: 0.32rem 0; border-bottom: 1px solid var(--surface2); }
+    .spotlight-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .spotlight-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 0.35rem; }
+    .spotlight-item-text { flex: 1; }
+    .spotlight-title { font-size: 0.79rem; font-weight: 600; color: var(--text); line-height: 1.35; margin: 0 0 0.18rem 0; }
+    .spotlight-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.1rem 0.4rem; border-radius: 20px; background: var(--tag-bg); color: var(--accent); }
     @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
     .about-highlights { display: flex; flex-direction: column; gap: 0.85rem; }
     .highlight-card {
@@ -533,49 +507,41 @@
         <!-- AI Spotlight -->
         <div class="ai-spotlight">
           <div class="spotlight-header">
-            <div class="spotlight-bulb">💡</div>
+            <span class="spotlight-star">✦</span>
             <h4>AI <span>Spotlight</span></h4>
           </div>
-          <div class="spotlight-tile">
-            <div class="spotlight-tile-top">
-              <span class="spotlight-icon">🧠</span>
-              <div class="spotlight-content">
+          <div class="spotlight-card">
+            <div class="spotlight-item">
+              <span class="spotlight-dot"></span>
+              <div class="spotlight-item-text">
                 <p class="spotlight-title">SDOH Identification from Raw Clinical Notes</p>
                 <span class="spotlight-tag">NLP · GenAI</span>
               </div>
             </div>
-          </div>
-          <div class="spotlight-tile">
-            <div class="spotlight-tile-top">
-              <span class="spotlight-icon">🔗</span>
-              <div class="spotlight-content">
+            <div class="spotlight-item">
+              <span class="spotlight-dot"></span>
+              <div class="spotlight-item-text">
                 <p class="spotlight-title">Semantic AI Mapping — Source to Destination Templates</p>
                 <span class="spotlight-tag">Semantic AI · Data Mapping</span>
               </div>
             </div>
-          </div>
-          <div class="spotlight-tile">
-            <div class="spotlight-tile-top">
-              <span class="spotlight-icon">🤖</span>
-              <div class="spotlight-content">
+            <div class="spotlight-item">
+              <span class="spotlight-dot"></span>
+              <div class="spotlight-item-text">
                 <p class="spotlight-title">Multi-Agent Virtual HealthAI Assistant</p>
                 <span class="spotlight-tag">Multi-Agent · LLM</span>
               </div>
             </div>
-          </div>
-          <div class="spotlight-tile">
-            <div class="spotlight-tile-top">
-              <span class="spotlight-icon">⚕️</span>
-              <div class="spotlight-content">
+            <div class="spotlight-item">
+              <span class="spotlight-dot"></span>
+              <div class="spotlight-item-text">
                 <p class="spotlight-title">HL7 FHIR Agent SKILLS</p>
                 <span class="spotlight-tag">FHIR · Agentic AI</span>
               </div>
             </div>
-          </div>
-          <div class="spotlight-tile">
-            <div class="spotlight-tile-top">
-              <span class="spotlight-icon">🏥</span>
-              <div class="spotlight-content">
+            <div class="spotlight-item">
+              <span class="spotlight-dot"></span>
+              <div class="spotlight-item-text">
                 <p class="spotlight-title">Clinical MCP Server — Encounter, Medication, Care Team, Quality</p>
                 <span class="spotlight-tag">MCP · Clinical APIs</span>
               </div>
