@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Praveen Kumar Singh — Senior Engineering Manager & AI Leader</title>
+
+  <!-- ✅ GoatCounter Analytics — free, privacy-friendly, no cookie banner needed -->
+  <!-- SETUP STEP: Replace praveenks30 below with your GoatCounter site code (e.g. praveenks30) -->
+  <!-- Register free at https://www.goatcounter.com → Settings → your site code -->
+  <script data-goatcounter="https://praveenks30.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+
   <style>
     :root {
       --primary: #2D3748;
@@ -429,6 +436,29 @@
       text-align: center;
       font-size: 0.78rem; color: var(--muted);
     }
+
+    /* VISITOR COUNTER BADGE */
+    .visitor-counter {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+      background: var(--tag-bg);
+      border: 1px solid rgba(43,138,124,0.2);
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.3px;
+      transition: opacity 0.4s;
+    }
+    .visitor-counter .vc-sep {
+      width: 1px; height: 12px;
+      background: rgba(43,138,124,0.3);
+    }
+    .visitor-counter .vc-loading { opacity: 0.45; font-style: italic; }
+    .visitor-counter .vc-num { font-weight: 800; }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -1017,7 +1047,44 @@
 
   <footer>
     <p>© 2026 Praveen Kumar Singh · Senior Engineering Manager &amp; AI Leader · Hyderabad, India</p>
+    <div class="visitor-counter" id="visitorCounter">
+      <span>👁</span>
+      <span id="vcViews" class="vc-loading vc-num">—</span>
+      <span>views</span>
+      <span class="vc-sep"></span>
+      <span>👤</span>
+      <span id="vcUnique" class="vc-loading vc-num">—</span>
+      <span>unique visitors</span>
+    </div>
   </footer>
+
+  <script>
+    // ─── GoatCounter Visitor Counter ────────────────────────────────────────────
+    // SETUP: Replace praveenks30 below with your GoatCounter site code.
+    // (Same code you put in the <script data-goatcounter="…"> tag above.)
+    // Register free at https://www.goatcounter.com
+    const GC_CODE = 'praveenks30';
+
+    (function fetchVisitorCount() {
+
+      // GoatCounter counter API — returns { count: "1,234", count_unique: 456 }
+      fetch('https://' + GC_CODE + '.goatcounter.com/counter/%2F.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var vv = document.getElementById('vcViews');
+          var vu = document.getElementById('vcUnique');
+          vv.textContent  = data.count        || '—';
+          vu.textContent  = data.count_unique !== undefined
+                              ? data.count_unique.toLocaleString()
+                              : '—';
+          vv.classList.remove('vc-loading');
+          vu.classList.remove('vc-loading');
+        })
+        .catch(function() {
+          // Silently fail — counter just stays at —
+        });
+    })();
+  </script>
 
 </body>
 </html>
