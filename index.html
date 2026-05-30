@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Praveen Kumar Singh — Senior Engineering Manager & AI Leader</title>
 
-  <!-- ✅ GoatCounter Analytics — free, privacy-friendly, no cookie banner needed -->
-  <!-- SETUP STEP: Replace praveenks30 below with your GoatCounter site code (e.g. praveenks30) -->
-  <!-- Register free at https://www.goatcounter.com → Settings → your site code -->
-  <script data-goatcounter="https://praveenks30.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
-
   <style>
     :root {
       --primary: #2D3748;
@@ -438,6 +432,11 @@
     }
 
     /* VISITOR COUNTER BADGE */
+    .visitor-counter img {
+      height: 22px;
+      vertical-align: middle;
+      border-radius: 4px;
+    }
     .visitor-counter {
       display: inline-flex;
       align-items: center;
@@ -516,7 +515,7 @@
       <div class="hero-stats">
         <div class="stat"><span class="stat-num">14+</span><span class="stat-label">Years Experience</span></div>
         <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Engineers Led</span></div>
-        <div class="stat"><span class="stat-num">9K+</span><span class="stat-label">YouTube Subscribers</span></div>
+        <div class="stat"><span class="stat-num">10K+</span><span class="stat-label">YouTube Subscribers</span></div>
         <div class="stat"><span class="stat-num">54★</span><span class="stat-label">GitHub Stars</span></div>
       </div>
       <div class="hero-btns">
@@ -537,7 +536,7 @@
         <div class="about-text">
           <p>I'm a Senior Engineering Manager at Optum (UnitedHealth Group), where I lead 30+ onshore and offshore engineers building healthcare technology that impacts millions of patients across U.S. clinical systems. Over 14+ years at Optum — growing from Senior Software Engineer to my current role — I've developed deep expertise in architecting scalable systems and driving AI-powered transformation in healthcare.</p>
           <p>My passion lies at the intersection of AI and healthcare: from leading Generative AI initiatives to mentoring teams on modern engineering practices. I believe the best code is code that helps someone get healthier, faster.</p>
-          <p>Outside of Optum, I run <strong style="color:var(--accent)">TechyTacos</strong> on YouTube (9K+ subscribers), sharing tutorials on AI/ML, cloud, and backend engineering. I also write on Medium and contribute to open-source AI projects on GitHub.</p>
+          <p>Outside of Optum, I run <strong style="color:var(--accent)">TechyTacos</strong> on YouTube (10K+ subscribers), sharing tutorials on AI/ML, cloud, and backend engineering. I also write on Medium and contribute to open-source AI projects on GitHub.</p>
         </div>
         <!-- AI Spotlight -->
         <div class="ai-spotlight">
@@ -798,7 +797,7 @@
         <div class="content-card">
           <div class="content-card-header">
             <div class="content-icon">▶️</div>
-            <div><h3>TechyTacos — YouTube</h3><div class="content-meta">9,000+ Subscribers</div></div>
+            <div><h3>TechyTacos — YouTube</h3><div class="content-meta">10,000+ Subscribers</div></div>
           </div>
           <p style="font-size:0.83rem; color:var(--muted); margin-bottom:1rem;">Engineering tutorials on AI &amp; Cloud — covering Multi-Agent Systems, Google ADK, Azure OpenAI, MCP Servers, Kafka, and cloud-native development.</p>
           <a href="https://www.youtube.com/@TechyTacos" target="_blank" class="btn btn-outline" style="font-size:0.78rem; padding:0.48rem 0.9rem;">Visit Channel →</a>
@@ -1048,43 +1047,16 @@
   <footer>
     <p>© 2026 Praveen Kumar Singh · Senior Engineering Manager &amp; AI Leader · Hyderabad, India</p>
     <div class="visitor-counter" id="visitorCounter">
-      <span>👁</span>
-      <span id="vcViews" class="vc-loading vc-num">—</span>
-      <span>views</span>
+      <!-- Profile visit counters — reliable image badges used by millions of GitHub READMEs -->
+      <img src="https://komarev.com/ghpvc/?username=praveenks30-portfolio&label=Profile%20Visits&color=2b8a7c&style=for-the-badge"
+           alt="Profile Visits"
+           onerror="this.style.display='none'" />
       <span class="vc-sep"></span>
-      <span>👤</span>
-      <span id="vcUnique" class="vc-loading vc-num">—</span>
-      <span>unique visitors</span>
+      <img src="https://api.visitorbadge.io/api/visitors?path=praveenks30%2Fportfolio&label=Total%20Views&countColor=%23E07B39&style=for-the-badge&labelColor=%232D3748"
+           alt="Total Views"
+           onerror="this.style.display='none'" />
     </div>
   </footer>
-
-  <script>
-    // ─── GoatCounter Visitor Counter ────────────────────────────────────────────
-    // SETUP: Replace praveenks30 below with your GoatCounter site code.
-    // (Same code you put in the <script data-goatcounter="…"> tag above.)
-    // Register free at https://www.goatcounter.com
-    const GC_CODE = 'praveenks30';
-
-    (function fetchVisitorCount() {
-
-      // GoatCounter counter API — returns { count: "1,234", count_unique: 456 }
-      fetch('https://' + GC_CODE + '.goatcounter.com/counter/%2F.json')
-        .then(function(r) { return r.json(); })
-        .then(function(data) {
-          var vv = document.getElementById('vcViews');
-          var vu = document.getElementById('vcUnique');
-          vv.textContent  = data.count        || '—';
-          vu.textContent  = data.count_unique !== undefined
-                              ? data.count_unique.toLocaleString()
-                              : '—';
-          vv.classList.remove('vc-loading');
-          vu.classList.remove('vc-loading');
-        })
-        .catch(function() {
-          // Silently fail — counter just stays at —
-        });
-    })();
-  </script>
 
 </body>
 </html>
